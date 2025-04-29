@@ -1,18 +1,21 @@
-# [Nome do projeto]
+# NutriTech
 
-[Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.]
+Desenvolver um site de auxílio nutricional que ofereça informações confiáveis sobre alimentação saudável, disponibilize ferramentas para o acompanhamento da dieta, como calculadoras nutricionais e sugestões de cardápios personalizados, promova a educação nutricional por meio de artigos, vídeos e dicas práticas, incentive a adoção de hábitos alimentares saudáveis de forma contínua e sustentável.
+
 
 ## Alunos integrantes da equipe
 
-* [Nome completo do aluno 1]
-* [Nome completo do aluno 2]
-* [Nome completo do aluno 3]
-* [Nome completo do aluno 4]
+* Felipe Paz Carvalho Batista
+* Luiz Fernando Penholate Alves Durães
+* Eli Júnior Domingos Dias
+* Gabriel Junio Nunes Viana
+* Felipe Gabriel Santos Moreira
+
 
 ## Professores responsáveis
 
-* [Nome completo do professor 1]
-* [Nome completo do professor 2]
+* Danilo de Quadros Maia Filho
+* Daniel Machado Osório Pereira
 
 ## Instruções de utilização
 
