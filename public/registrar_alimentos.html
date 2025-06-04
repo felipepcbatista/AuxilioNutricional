@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Alimentos</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/registrar.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header-site">
+            <h1>Registrar Alimentos</h1>
+            <nav>
+                <ul>
+                    <li><a href="/diario_alimentar.html">Diário</a></li>
+                    <li><a href="/informacoes.html">Informações Nutricionais</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="nome-refeicao">Refeição</label>
+                <select id="nome-refeicao">
+                    <option value="">Todas</option>
+                    <option value="cafe-manha">Café da manhã</option>
+                    <option value="almoco">Almoço</option>
+                    <option value="jantar">Jantar</option>
+                    <option value="lanches">Lanches</option>
+                </select>
+            </div>
+
+            <h2>Alimentos</h2>
+            <div class="filter-tabs">
+                <button class="active">Todos</button>
+                <button>Minhas Refeições</button>
+                <button>Receitas</button>
+                <button>Favoritos</button>
+                <button>Recentes</button>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Pesquisar alimentos...">
+                <button id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+
+        <section class="suggestions">
+            <h2>Sugestões</h2>
+            <div class="food-list" id="food-suggestions">
+                <!-- Lista de alimentos será preenchida via JavaScript -->
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

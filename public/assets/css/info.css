@@ -1,0 +1,102 @@
+.info-container {
+  background-color: #E6F4EA;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.info-container h2 {
+  color: #051D40;
+  margin-bottom: 20px;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.info-container button{
+    font-weight: bolder;
+    border: none;
+    background-color: var(--fundo-secundario);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+.info-container a{
+    text-decoration: none;
+}
+.header-info{
+    display: flex;
+    gap: 17rem;
+}
+
+.progresso-grid {
+  display: grid;
+  grid-template-areas: 
+    ". calorias ."
+    "carbo proteina gordura";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-items: center;
+}
+
+.progresso-item:nth-child(1) { grid-area: calorias; }
+.progresso-item:nth-child(2) { grid-area: carbo; }
+.progresso-item:nth-child(3) { grid-area: proteina; }
+.progresso-item:nth-child(4) { grid-area: gordura; }
+
+
+.progresso-anel {
+  position: relative;
+}
+
+.progresso-anel_background {
+  stroke: #e0e0e0;
+}
+
+.progresso-anel_circulo {
+  stroke-dasharray: 264;
+  stroke-dashoffset: 66; 
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.35s;
+}
+
+.progresso-anel_circulo.calorias { stroke: #051d40; }
+.progresso-anel_circulo.carbo    { stroke: #008000; }
+.progresso-anel_circulo.proteina { stroke: #F57C00; }
+.progresso-anel_circulo.gordura  { stroke: #9C27B0; }
+
+.progresso-texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #333;
+  font-size: 20px;
+}
+
+.progresso-texto.small {
+  font-size: 16px;
+}
+
+
+.progresso-legenda {
+  margin-top: 5px;
+  color: #051D40;
+  font-weight: bold;
+}
+
+.detalhe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.detalhe-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Alimento</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/adicionar.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Adicionar Alimentos</h1>
+            <nav>
+                <ul>
+                    <li><a href="/diario_alimentar.html">Diário</a></li>
+                    <li><a href="/informacoes.html">Informações Nutricionais</a></li>
+                </ul>
+            </nav>
+        </header>
+
+       
+           <div id="food-name" class="food-name">Nome do Alimento</div>
+
+            <div class="food-image">
+            <img id="food-image" src="" alt="Imagem do Alimento">
+        </div>
+
+            <div class="quantity-input">
+            <label for="food-quantity">Quantidade (gramas):</label>
+            <input type="number" id="food-quantity" value="100" min="1">
+        </div>
+
+           <div class="nutrition-values">
+            <div class="nutrition-value">
+                <div class="food-carbs"><span id="food-carbs" class="value">0</span>
+                <span class="label">CARBOIDRATOS</span></div>
+            </div>
+            <div class="nutrition-value">
+                <div class="food-protein"><span id="food-protein" class="value">0</span>
+                <span class="label">PROTEÍNAS</span></div>
+            </div>
+            <div class="nutrition-value">
+                <div class="food-fat"><span id="food-fat" class="value">0</span>
+                <span class="label">GORDURAS</span></div>
+            </div>
+        </div>
+
+           <div class="nav-buttons">
+            <button id="voltar" class="nav-button">Voltar</button>
+            <button id="confirm-add" class="nav-button">Confirmar</button>
+        </div>
+    
+        </div>
+        <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+  </div>
+</footer>
+    
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

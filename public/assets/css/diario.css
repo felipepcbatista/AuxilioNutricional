@@ -1,0 +1,242 @@
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.data h2 {
+    margin: 0 20px;
+    color: var(--detalhes4);
+}
+
+/* Summary Sections */
+.refeicoes, .agua{
+    background-color: var(--fundo-cards);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.btn-resumo{
+    border: none;
+    transition: transform 0.2s ease;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #E6F4EA;
+    
+    
+}
+.btn-resumo a{
+    text-decoration: none;
+    color: var(--texto);
+}
+.btn-resumo:hover{
+    transform: scale(1.01);
+}
+.resumo-diario h3 {
+    margin: 1rem;
+    text-align: left;
+    padding-bottom: 3rem;
+    color: var(--detalhes2);
+}
+
+.refeicoes h3, .agua h3 {
+    margin-bottom: 15px;
+    color: var(--detalhes2);
+    font-size: 1.8rem;
+}
+
+.resumo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+    
+}
+
+.resumo-item {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--fundo-cards);
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}
+
+.resumo-item span:first-child {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--detalhes2);
+    margin-bottom: 5px;
+    font-weight: 550;
+}
+
+.resumo-item span:last-child {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.macros {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.4rem;
+    
+}
+
+.carbs {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color:var(--fundo-cards);
+    border-radius: 6px;
+    margin: 0 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.protein {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--fundo-cards);
+    border-radius: 6px;
+    margin: 0 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.fat {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--fundo-cards);
+    border-radius: 6px;
+    margin: 0 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+.carbs{
+    color: #008000;
+}
+.protein{
+    color: var(--detalhes4);
+}
+.fat{
+    color: var(--detalhes1);
+}
+
+.Refeicoes h3{
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 5px solid var(--detalhes2);
+    background-color: var(--fundo-cards);
+    font-size: 1.4rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+
+.th {
+    color: var(--detalhes2);
+    font-size: 1.2rem;
+    display: flex;
+    gap: 6.5rem;
+    justify-content: end;
+    margin-right: 14.6rem;
+    font-weight: bolder;
+}
+
+td button{
+    width: 3rem;
+    height: 3rem;
+    margin-right: -5rem;
+    background-color: #051D40;
+    color: aliceblue;
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+
+}
+td button:hover{
+    background-color: rgb(95, 95, 95);
+    border: none;
+    color: var(--detalhes2);
+    transform: scale(1.1);
+}
+td button a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+.agua-progresso {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+progress {
+    flex-grow: 1;
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgb(221, 221, 221);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: rgb(15, 42, 100);
+    border-radius: 10px;
+}
+
+#add-agua {
+    background-color: rgb(15, 42, 100);
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 0.7rem;
+}
+
+#add-agua:hover {
+    background-color: #0e0e38;
+    transform: scale(1.1);
+}
+#menos-agua{
+    background-color: rgb(15, 42, 100);
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#menos-agua:hover {
+    background-color: #0e0e38;
+    transform: scale(1.03);
+}

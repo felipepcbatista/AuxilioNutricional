@@ -1,0 +1,159 @@
+/* ----- PALETA ----- */
+:root {
+    --fundo-principal: #e6f4ea91;
+    --fundo-secundario: #E6F4EA;
+    --fundo-cards: #eeeeee;
+    --texto: #333333;
+    --detalhes1: #5E17EB;
+    --detalhes2: #051D40;
+    --detalhes3: #008000;
+    --detalhes4: #f86f3e;
+}
+
+/* ----- ESTILOS GERAIS ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--fundo-principal);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.212);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--detalhes2);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--texto);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: var(--detalhes2);
+    color: aliceblue;
+}
+
+.footer {
+  background-color: #051D40;
+  color: #F2F3F7;
+  padding: 40px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  align-items: flex-start;
+}
+
+.footer-logo img{
+  font-size: 24px;
+  color: #9F2B00;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.footer-links {
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-links h3 {
+  color: lightgray;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #F2F3F7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #5E17EB;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.footer-social .icons a {
+  color: #F2F3F7;
+  font-size: 20px;
+  margin: 0 8px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social .icons a:hover {
+  transform: scale(1.2);
+  color: #5E17EB;
+}
+
+.footer-btn {
+  background-color: #9F2B00;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-btn:hover {
+  background-color: #5E17EB;
+}
+
+.footer-bottom {
+  border-top: 1px solid #F2F3F7;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
