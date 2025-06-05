@@ -4,6 +4,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 5rem;
+    gap: 30rem;
+    background-color: var(--fundo-principal);
+    max-width: 100vw;
+    padding: 2rem;
+    
 }
 .user-icon{
     font-size: 10rem;
@@ -19,4 +24,27 @@
     margin-top: 0.5rem;
     background-color: rgba(214, 214, 214, 0.568);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
+}
+.user-list {
+    text-align: center;
+    border-right: 2px solid gray;
+    padding-right: 10rem;
+}
+.user-list li{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.info-list{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+}
+.info-list h3{
+    font-size: 1.7rem;
+    color: var(--detalhes2);
+
 }
