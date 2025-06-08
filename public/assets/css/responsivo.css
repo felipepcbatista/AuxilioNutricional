@@ -191,3 +191,95 @@
     justify-content: center;
   }
 }
+
+
+/*INFORMAÇÕES ALIMENTARES*/
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .header-info button {
+    align-self: center;
+  }
+
+  .progresso-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .progresso-item {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .progresso-legenda {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .detalhes-nutricionais h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .detalhe-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 1rem;
+  }
+
+  .detalhe-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-social .icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 1rem 0;
+  }
+}
