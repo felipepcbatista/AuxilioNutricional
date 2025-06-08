@@ -283,3 +283,117 @@
     padding: 1rem 0;
   }
 }
+
+
+/*REGISTRAR ALIMENTOS*/
+
+.header-site nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header-site {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-site h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .header-site nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-tabs {
+    flex-direction: column;
+  }
+
+  .filter-tabs button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .suggestions {
+    margin-top: 20px;
+  }
+
+  .food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-social .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+  }
+}

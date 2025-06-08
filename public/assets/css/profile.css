@@ -10,7 +10,6 @@ main{
     margin-bottom: 5rem;
     gap: 30rem;
     background-color: var(--fundo-principal);
-    max-width: 600px;
     width: 100%;
     box-sizing: border-box;
     padding: 2rem;   
