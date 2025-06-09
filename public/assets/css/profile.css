@@ -48,7 +48,29 @@ main{
     
 }
 .info-list h3{
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     color: var(--detalhes2);
 
 }
+    .edit-icon {
+      cursor: pointer;
+      margin-left: 8px;
+      color: var(--detalhes3);
+      font-size: 1rem;
+    }
+
+    .save-icon {
+      cursor: pointer;
+      margin-left: 8px;
+      color: #008000;
+    }
+
+    .info-item {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    input.edit-field {
+      margin-left: 8px;
+      padding: 4px;
+    }
