@@ -23,6 +23,16 @@
     margin-bottom: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.favorito-icon {
+  cursor: pointer;
+  color: #FFD700;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.favorito-icon:hover {
+  transform: scale(1.2);
+}
 
 /* Imagem do alimento */
 .food-image {

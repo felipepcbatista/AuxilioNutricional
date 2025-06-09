@@ -167,10 +167,40 @@ document.addEventListener('DOMContentLoaded', function () {
                         foodImage.style.display = 'block';
                     }
                     updateNutritionValues();
+                    const starIcon = document.getElementById("star-icon");
+                    const isFavorito = localStorage.getItem(`favorito-${selectedFood.nome}`) === "true";
+                    if (isFavorito) {
+                    starIcon.classList.remove("fa-regular");
+                    starIcon.classList.add("fa-solid");
+                    } else {
+                    starIcon.classList.remove("fa-solid");
+                    starIcon.classList.add("fa-regular");
+                    }
+
                 }
             })
             .catch(err => console.error('Erro ao carregar alimento:', err));
     }
+
+            // ----------- Função de Favoritos ----------
+    function toggleFavorito() {
+        const icon = document.getElementById("star-icon");
+        const nome = selectedFood?.nome || "";
+        const key = `favorito-${nome}`;
+
+        const isFavorito = localStorage.getItem(key) === "true";
+
+        if (isFavorito) {
+            icon.classList.remove("fa-solid");
+            icon.classList.add("fa-regular");
+            localStorage.setItem(key, "false");
+        } else {
+            icon.classList.remove("fa-regular");
+            icon.classList.add("fa-solid");
+            localStorage.setItem(key, "true");
+        }
+        }
+
 
     // ----------- Carregar Lista se for Tela de Registrar Alimentos ----------
     if (window.location.pathname.includes('registrar_alimentos')) {
