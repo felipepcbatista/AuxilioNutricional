@@ -1,3 +1,0 @@
-Olá, na pasta TUDOJUNTO inicie na pagina login.html para testar as próximas funcionalidades. Isso por que todas os artefatos estão juntos menos calendário que será inserido em outra página.
-Além Disso, há cada funcionalidade separada por pasta.
-Obrigado.
