@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.food-btn').forEach(btn => {
             btn.addEventListener('click', function () {
                 const foodId = this.dataset.id;
-                window.location.href = 'adicionar_alimentos.html?id=' + foodId;
+                window.location.href = 'adicionar_alimentos?id=' + foodId;
             });
         });
     }

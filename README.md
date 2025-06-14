@@ -1,12 +1,16 @@
-PASSO A PASSO PARA RODAR O SITE:
+## Requisitos para rodar o site
 
-NO TERMINAL:
-1- npm init -y
-2- npm install express
-3- node server.js
+- [Node.js](https://nodejs.org) instalado na máquina
+
+Abra o terminal na pasta do projeto e execute:
+1- npm install express
+2- node Codigo/back-end/server.js
 
 Por fim, digite no navegador:
-4- http://localhost:3001
+3- http://localhost:3001
+
+
+
 
 
 # NutriTech

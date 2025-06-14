@@ -6,35 +6,43 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware para servir arquivos estáticos
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/assets', express.static(path.join(__dirname, 'public', 'assets')));
-app.use('/data', express.static(path.join(__dirname, 'public', 'data')));
+app.use('/assets', express.static(path.join(__dirname, '../front-end/assets')));
 
 // Middleware para interpretar JSON
 app.use(express.json());
 
-// Rotas para páginas
+// Rotas para páginas HTML
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'diario_alimentar.html'));
+    res.sendFile(path.join(__dirname, '../front-end', 'diario_alimentar.html'));
+});
+
+app.get('/diario_alimentar', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end', 'diario_alimentar.html'));
 });
 
 app.get('/registrar_alimentos', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'registrar_alimentos.html'));
+    res.sendFile(path.join(__dirname, '../front-end', 'registrar_alimentos.html'));
 });
 
-
 app.get('/informacoes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'informacoes.html'));
+    res.sendFile(path.join(__dirname, '../front-end', 'informacoes.html'));
 });
 
 app.get('/adicionar_alimentos', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'adicionar_alimentos.html'));
+    res.sendFile(path.join(__dirname, '../front-end', 'adicionar_alimentos.html'));
+});
+
+app.get('/user_profile', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end', 'user_profile.html'));
 });
 
 // API para obter alimentos
 app.get('/api/alimentos', (req, res) => {
     try {
-        const alimentosData = fs.readFileSync(path.join(__dirname, 'public', 'data', 'alimentos.json'), 'utf-8');
+        const alimentosData = fs.readFileSync(
+            path.join(__dirname, '../front-end/data/alimentos.json'),
+            'utf-8'
+        );
         const alimentos = JSON.parse(alimentosData);
         res.json(alimentos.alimentos);
     } catch (error) {
@@ -42,7 +50,6 @@ app.get('/api/alimentos', (req, res) => {
         res.status(500).json({ error: 'Erro ao carregar alimentos' });
     }
 });
-
 
 // API para adicionar alimento
 app.post('/api/adicionar_alimento', (req, res) => {
