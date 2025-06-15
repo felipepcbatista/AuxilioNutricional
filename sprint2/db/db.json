@@ -1,0 +1,34 @@
+{
+  "metas": {
+    "item": {
+      "item": {
+        "item": {
+          "peso": {
+            "atual": 70,
+            "meta": 65
+          },
+          "calorias": {
+            "atual": 1800,
+            "meta": 2200
+          },
+          "agua": {
+            "atual": 1.5,
+            "meta": 2.5
+          }
+        },
+        "calorias": {
+          "atual": 2000,
+          "meta": 2200
+        }
+      },
+      "calorias": {
+        "atual": 2200,
+        "meta": 2200
+      }
+    },
+    "calorias": {
+      "atual": 2400,
+      "meta": 2200
+    }
+  }
+}

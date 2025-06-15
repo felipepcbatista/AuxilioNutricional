@@ -1,0 +1,20 @@
+     {
+       "metas": [
+         {
+           "tipo": "peso",
+           "pesoAtual": "70 kg",
+           "meta": "65 kg"
+         },
+         {
+           "tipo": "calorias",
+           "caloriasAtuais": "1800 kcal",
+           "meta": "2200 kcal"
+         },
+         {
+           "tipo": "agua",
+           "aguaAtual": "1,5 l",
+           "meta": "2,5 l"
+         }
+       ]
+     }
+     
