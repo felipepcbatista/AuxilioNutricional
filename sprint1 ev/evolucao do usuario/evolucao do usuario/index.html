@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Evolução do Usuário</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>EVOLUÇÃO DO USUÁRIO</h1>
+
+    <section id="grafico" aria-label="Gráfico de evolução do usuário" class="mb-6">
+      <svg viewBox="0 0 600 300" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>Gráfico de evolução do peso do usuário</title>
+        <desc>Gráfico de linha mostrando a evolução do peso do usuário ao longo do tempo</desc>
+        <rect width="600" height="300" fill="#E6F4EA" />
+
+        <!-- Eixos -->
+        <g stroke="#9F2B00" stroke-width="1" stroke-opacity="0.3">
+          <line x1="50" y1="50" x2="580" y2="50" />
+          <line x1="50" y1="100" x2="580" y2="100" />
+          <line x1="50" y1="150" x2="580" y2="150" />
+          <line x1="50" y1="200" x2="580" y2="200" />
+          <line x1="50" y1="250" x2="580" y2="250" />
+        </g>
+        <line x1="50" y1="0" x2="50" y2="250" stroke="#051D40" stroke-width="2" />
+        <line x1="50" y1="250" x2="580" y2="250" stroke="#051D40" stroke-width="2" />
+
+        <!-- Labels eixo Y -->
+        <g font-size="14" fill="#051D40" font-family="Arial, Helvetica, sans-serif">
+          <text x="20" y="55" text-anchor="middle" dominant-baseline="middle">90</text>
+          <text x="20" y="100" text-anchor="middle" dominant-baseline="middle">80</text>
+          <text x="20" y="150" text-anchor="middle" dominant-baseline="middle">70</text>
+          <text x="20" y="200" text-anchor="middle" dominant-baseline="middle">60</text>
+          <text x="20" y="250" text-anchor="middle" dominant-baseline="middle">50</text>
+        </g>
+
+        <!-- Gráfico -->
+        <polyline id="area" fill="rgba(0, 128, 0, 0.2)" stroke="#008000" stroke-width="0" points=""></polyline>
+        <polyline id="linha" fill="none" stroke="#008000" stroke-width="3" points=""></polyline>
+        <g id="pontos"></g>
+        <g id="datas" font-size="12" fill="#051D40" font-family="Arial, Helvetica, sans-serif" text-anchor="middle"></g>
+
+        <!-- Label eixo X -->
+        <text x="315" y="280" fill="#051D40" font-weight="500" font-size="16" text-anchor="middle">Data</text>
+      </svg>
+    </section>
+
+    <section aria-label="Mudanças do usuário" class="mb-6">
+      <h2>MUDANÇAS</h2>
+      <ul id="mudancas"></ul>
+    </section>
+
+    <form aria-label="Formulário para registrar mudança" id="form">
+      <p>Registrar mudança</p>
+      <label for="data">Data</label>
+      <input id="data" name="data" type="date" required />
+      <label for="peso">Peso (kg)</label>
+      <input id="peso" name="peso" type="number" step="0.1" min="0" required />
+      <button type="submit">Atualizar</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
