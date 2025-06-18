@@ -45,6 +45,18 @@
 #nome-refeicao>option{
     background-color: aliceblue;
 }
+.btn-back{
+    font-weight: bolder;
+    border: none;
+    background-color: var(--secondary-color);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+.link-back{
+    text-decoration: none;
+}
+
 h2{
     color: var(--detalhes2);
 }
