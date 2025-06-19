@@ -36,6 +36,10 @@ app.get('/user_profile', (req, res) => {
     res.sendFile(path.join(__dirname, '../front-end', 'user_profile.html'));
 });
 
+app.get('/receitas', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end', 'receitas.html'));
+});
+
 // API para obter alimentos
 app.get('/api/alimentos', (req, res) => {
     try {
