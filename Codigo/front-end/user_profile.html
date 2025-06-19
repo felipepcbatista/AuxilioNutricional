@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Perfil</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/responsivo.css" />
+  <link rel="stylesheet" href="assets/css/profile.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Meu Perfil</h1>
+      <nav>
+        <ul>
+          <li><a href="/diario_alimentar">Diário</a></li>
+          <li><a href="/informacoes">Informações Nutricionais</a></li>
+          <li><a href="/user_profile" class="active"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <main>
+    <div class="user">
+      <ul class="user-list">
+        <li><i class="fa-solid fa-user user-icon"></i></li>
+
+        <li class="info-item">
+  <span id="nickname-display" style="font-weight: bold; font-size: 1.2em;"></span>
+  <input type="text" id="nickname-input" class="edit-field" style="display:none;">
+  <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('nickname')"></i>
+  <i class="fa-solid fa-check save-icon" onclick="salvarCampo('nickname')" style="display:none;"></i>
+</li>
+
+<li class="info-item">
+  <span id="nomeCompleto-display" style="font-size: 0.9em;"></span>
+</li>
+      </ul>
+
+
+      <div class="info-list">
+        <h3>Informações</h3>
+        <ul>
+          <li class="info-item"><strong>Peso (kg):</strong>
+            <span id="peso-display"></span>
+            <input type="number" id="peso-input" class="edit-field" min="0" style="display:none;">
+            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('peso')"></i>
+            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('peso')" style="display:none;"></i>
+            </li>
+
+            <li class="info-item"><strong>Altura (cm):</strong>
+            <span id="altura-display"></span>
+            <input type="number" id="altura-input" class="edit-field" min="0" style="display:none;">
+            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('altura')"></i>
+            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('altura')" style="display:none;"></i>
+            </li>
+
+            <li class="info-item"><strong>Objetivo:</strong>
+            <span id="objetivo-display"></span>
+            <select id="objetivo-input" class="edit-field" style="display:none;">
+                <option value="">Selecione...</option>
+                <option value="Perder peso">Perder peso</option>
+                <option value="Ganhar massa muscular">Ganhar massa muscular</option>
+                <option value="Manter peso">Manter peso</option>
+                <option value="Melhorar saúde geral">Melhorar saúde geral</option>
+            </select>
+            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('objetivo')"></i>
+            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('objetivo')" style="display:none;"></i>
+            </li>
+
+            <li class="info-item"><strong>Idade:</strong>
+            <span id="idade-display"></span>
+            <input type="number" id="idade-input" class="edit-field" min="0" style="display:none;">
+            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('idade')"></i>
+            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('idade')" style="display:none;"></i>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/images/logo-NutriTech.png" alt="Logo" />
+      </div>
+
+      <div class="footer-links">
+        <h3>Sobre</h3>
+        <ul>
+          <li><a href="#">Informações</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Telefone</a></li>
+          <li><a href="#">Chat</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <div class="icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Carregar os dados salvos
+    function carregarDados() {
+      const campos = ["nickname", "nomeCompleto", "peso", "altura", "objetivo", "idade"];
+      campos.forEach((campo) => {
+        const valor = localStorage.getItem(campo) || "-";
+        document.getElementById(`${campo}-display`).textContent = valor;
+        document.getElementById(`${campo}-input`).value = valor !== "-" ? valor : "";
+      });
+    }
+
+    // Ativa edição
+    function editarCampo(campo) {
+      document.getElementById(`${campo}-display`).style.display = "none";
+      document.getElementById(`${campo}-input`).style.display = "inline-block";
+      document.querySelector(`#${campo}-input + .edit-icon`).style.display = "none";
+      document.querySelector(`#${campo}-input + .edit-icon + .save-icon`).style.display = "inline-block";
+    }
+
+    // Salva valor e volta para texto
+    function salvarCampo(campo) {
+        const inputEl = document.getElementById(`${campo}-input`);
+        let valor = inputEl.tagName === "SELECT"
+            ? inputEl.value
+            : inputEl.value.trim();
+
+        // Validação de números negativos
+        if (["peso", "altura", "idade"].includes(campo)) {
+            const num = parseFloat(valor);
+            if (isNaN(num) || num < 0) {
+            alert("Insira um valor válido (maior ou igual a 0).");
+            return;
+            }
+        }
+
+        valor = valor || "-";
+        localStorage.setItem(campo, valor);
+        document.getElementById(`${campo}-display`).textContent = valor;
+
+        inputEl.style.display = "none";
+        document.getElementById(`${campo}-display`).style.display = "inline";
+
+        const editIcon = inputEl.nextElementSibling;
+        const saveIcon = editIcon.nextElementSibling;
+        editIcon.style.display = "inline-block";
+        saveIcon.style.display = "none";
+        }
+
+    window.onload = carregarDados;
+  </script>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

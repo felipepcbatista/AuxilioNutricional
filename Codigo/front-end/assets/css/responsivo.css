@@ -1,0 +1,636 @@
+/*DIÁRIO ALIMENTAR*/
+
+@media (max-width: 992px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .resumo-diario {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .resumo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .macros {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .macros > div {
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .Refeicoes h3 {
+    text-align: center;
+  }
+
+  .th {
+    display: none;
+  }
+
+  table td, table th {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .agua {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .agua-progresso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #add-agua,
+  #menos-agua {
+    margin: 0.5rem;
+    width: 150px;
+  }
+}
+
+
+@media (max-width: 576px) {
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  .resumo-diario {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .resumo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .macros {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+
+  table thead,
+  .th {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  table td {
+    word-wrap: break-word;
+    text-align: center;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  table td button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    background-color: #051D40;
+    border: none;
+    border-radius: 4px;
+  }
+
+  table td button a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .agua {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  #agua-progresso {
+    width: 100%;
+    height: 20px;
+  }
+
+  #menos-agua,
+  #add-agua {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #051D40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+
+  .footer-social .icons {
+    justify-content: center;
+  }
+}
+
+
+/*INFORMAÇÕES ALIMENTARES*/
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .header-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .header-info button {
+    align-self: center;
+  }
+
+  .progresso-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .progresso-item {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .progresso-legenda {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .detalhes-nutricionais h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  .detalhe-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 1rem;
+  }
+
+  .detalhe-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-social .icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 1rem 0;
+  }
+}
+
+
+/*REGISTRAR ALIMENTOS*/
+
+.header-site nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header-site {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-site h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .header-site nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-tabs {
+    flex-direction: column;
+  }
+
+  .filter-tabs button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .suggestions {
+    margin-top: 20px;
+  }
+
+  .food-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-social .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+
+/*ADICIONAR ALIMENTOS*/
+
+.nutrition-values {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.nutrition-value {
+  text-align: center;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .app-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .app-header nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .food-name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .food-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .quantity-input {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .quantity-input input {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .nutrition-values {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-button {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-links,
+  .footer-social {
+    width: 100%;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-social .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+
+/*USER PROFILE*/
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+
+
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  main .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .user-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-icon {
+    font-size: 4rem;
+  }
+
+  .info-list {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .info-list ul {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer .footer-links {
+    margin: 15px 0;
+    width: 45%;
+  }
+
+  footer .footer-social {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  main .user {
+    padding: 10px;
+  }
+
+  .user-list {
+    gap: 5px;
+  }
+
+  .user-icon {
+    font-size: 3rem;
+  }
+
+  .info-list ul li {
+    font-size: 0.9rem;
+  }
+
+  footer .footer-links {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-social {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,172 @@
+:root {
+    --fundo-principal: #e6f4ea91;
+    --fundo-secundario: #E6F4EA;
+    --fundo-cards: #eeeeee;
+    --texto: #333333;
+    --detalhes1: #5E17EB;
+    --detalhes2: #051D40;
+    --detalhes3: #008000;
+    --detalhes4: #f86f3e;
+}
+
+
+
+/* Nome do Alimento */
+.food-name {
+    background-color: var(--fundo-cards);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--detalhes2);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.favorito-icon {
+  cursor: pointer;
+  color: #FFD700;
+  margin-left: 10px;
+  transition: transform 0.2s;
+}
+
+.favorito-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Imagem do alimento */
+.food-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.food-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.432);
+}
+
+/* Input de quantidade */
+.quantity-input {
+    background-color: var(--fundo-cards);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.quantity-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.quantity-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(145, 145, 145);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Valores nutricionais */
+.nutrition-values {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nutrition-value {
+    flex: 1;
+    background-color: var(--fundo-cards);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nutrition-value .value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nutrition-value .label {
+    font-size: 0.9rem;
+}
+
+.food-carbs{
+    color: var(--detalhes3);
+}
+.food-protein{
+    color: var(--detalhes4);
+}
+.food-fat{
+    color: var(--detalhes1);
+}
+
+/* Botões de navegação */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.nav-button {
+    flex: 1;
+    background-color: var(--detalhes2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: rgba(26, 26, 119, 0.842)
+}
+
+/* Sugestões de alimentos */
+.food-list {
+    list-style: none;
+    padding: 0;
+}
+
+.food-item {
+    margin-bottom: 10px;
+}
+
+.food-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fundo-cards);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.food-btn:hover {
+    background-color: var(--detalhes4);
+    color: white;
+}
+
+.food-btn .food-name {
+    font-weight: 600;
+}
+
+.food-btn .add-icon {
+    font-size: 1.2rem;
+    color: var(--detalhes1);
+}

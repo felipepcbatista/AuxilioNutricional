@@ -1,3 +1,18 @@
+## Requisitos para rodar o site
+
+- [Node.js](https://nodejs.org) instalado na máquina
+
+Abra o terminal na pasta do projeto e execute:
+1- npm install express
+2- node Codigo/back-end/server.js
+
+Por fim, digite no navegador:
+3- http://localhost:3001
+
+
+
+
+
 # NutriTech
 
 Desenvolver um site de auxílio nutricional que ofereça informações confiáveis sobre alimentação saudável, disponibilize ferramentas para o acompanhamento da dieta, como calculadoras nutricionais e sugestões de cardápios personalizados, promova a educação nutricional por meio de artigos, vídeos e dicas práticas, incentive a adoção de hábitos alimentares saudáveis de forma contínua e sustentável.

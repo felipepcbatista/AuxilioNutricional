@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário Alimentar</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/diario.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Diário Alimentar</h1>
+            <nav>
+                <ul>
+                    <li><a href="/diario_alimentar" class="active">Diário</a></li>
+                    <li><a href="/informacoes">Informações Nutricionais</a></li>
+                    <li><a href="/user_profile"><i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="data">
+                <h2 id="data-atual">Hoje</h2>
+            </div>
+
+            <button class="btn-resumo"><a href="/informacoes"> 
+                <section class="resumo-diario">
+                <h3>Resumo do Dia</h3>
+                <div class="resumo-grid">
+                    <div class="resumo-item">
+                        <span>Calorias consumidas</span>
+                        <span id="calorias-consumidas">0</span>
+                    </div>
+                    <div class="resumo-item">
+                        <span>Calorias restantes</span>
+                        <span id="calorias-restantes">2000</span>
+                    </div>
+                    <div class="resumo-item">
+                        <span>Calorias gastas</span>
+                        <span id="calorias-gastas">0</span>
+                    </div>
+                </div>
+                
+                <div class="macros">
+                    <div class="carbs">
+                        <span>Carboidratos:</span><br>
+                        <span id="total-carboidratos">0g</span>
+                    </div>
+                    <div class="protein">
+                        <span>Proteínas:</span><br>
+                        <span id="total-proteinas">0g</span>
+                    </div>
+                    <div class="fat">
+                        <span>Gorduras:</span><br>
+                        <span id="total-gorduras">0g</span>
+                    </div>
+                </div>
+            </section></a></button>
+
+            <section class="Refeicoes">
+                <h3>Refeições</h3>
+                
+                <div class="th">
+                    <p>Calorias</p>
+                    <p>Meta</p>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="breakfast">
+                            <td>Café da manhã</td>
+                            <td id="cafe-calorias">0</td>
+                            <td>-</td>
+                            <td><button><a href="/registrar_alimentos?refeicao=cafe-da-manha">+</a></button></td>
+                        </tr>
+                        <tr class="lunch">
+                            <td>Almoço</td>
+                            <td id="almoco-calorias">0</td>
+                            <td>-</td>
+                            <td><button><a href="/registrar_alimentos?refeicao=almoco">+</a></button></td>
+                        </tr>
+                        <tr class="dinner">
+                            <td>Jantar</td>
+                            <td id="jantar-calorias">0</td>
+                            <td>-</td>
+                            <td><button><a href="/registrar_alimentos?refeicao=jantar">+</a></button></td>
+                        </tr>
+                        <tr class="snacks">
+                            <td>Lanches</td>
+                            <td id="lanches-calorias">0</td>
+                            <td>-</td>
+                            <td><button><a href="/registrar_alimentos?refeicao=lanches">+</a></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="agua">
+                <h3>Água</h3>
+                <div class="agua-progresso">
+                    <progress id="agua-progresso" value="0" max="4750"></progress>
+                    <span id="agua-quantia">0 ml</span>
+                </div>
+                <button id="menos-agua">- 250ml</button>
+                <button id="add-agua">+ 250ml</button>
+                
+
+        </main>
+    </div>
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

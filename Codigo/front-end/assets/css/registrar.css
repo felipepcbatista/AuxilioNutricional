@@ -1,0 +1,284 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.app-header h1 {
+    font-size: 24px;
+    color: var(--secondary-color);
+}
+
+.header-actions button {
+    background-color: var(--fundo-principal);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.registrar-header h1{
+    color: var(--detalhes2);
+}
+/* Registrar Alimentos */
+.registrar-header h1{
+    color: var(--detalhes2);
+}
+
+.registrar-header{
+    display: block;
+}
+.filter-group label{
+    font-size: 1.6rem;
+    color: #051D40;
+}
+#nome-refeicao{
+    background-color: var(--fundo-cards);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+#nome-refeicao>option{
+    background-color: aliceblue;
+}
+.btn-back{
+    font-weight: bolder;
+    border: none;
+    background-color: var(--secondary-color);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+.link-back{
+    text-decoration: none;
+}
+
+h2{
+    color: var(--detalhes2);
+}
+
+.registrar-header{
+    display: block;
+}
+.filter-group label{
+    font-size: 1.6rem;
+    color: #051D40;
+}
+#nome-refeicao{
+    background-color: var(--fundo-cards);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+#nome-refeicao>option{
+    background-color: aliceblue;
+}
+h2{
+    color: var(--detalhes2);
+}
+
+.header-actions button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Filtros */
+.filters {
+    margin-bottom: 20px;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.filter-tabs {
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--fundo-cards);
+}
+
+.filter-tabs button {
+    padding: 8px 15px;
+    font-size: 1.01rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--texto);
+    margin-right: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.filter-tabs button.active {
+    border-bottom: 5px solid var(--detalhes1);
+    color: var(--detalhes1);
+    background-color: var(--fundo-cards);
+    font-weight: bolder;
+}
+.filter-tabs button:hover{
+    color: var(--detalhes4);
+    background-color: var(--fundo-cards);
+}
+.filter-tabs button.active:hover{
+    border-bottom: 5px solid var(--detalhes4);
+}
+
+.search-box {
+    display: flex;
+    margin-bottom:30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-radius: 5rem;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background-color: var(--fundo-cards);
+    color: rgb(0, 0, 0);
+    border-radius: 5rem;
+    border: 0.5px solid gray;
+    cursor: pointer;
+}
+.search-box button:hover{
+    background-color: #a6aaa6;
+    color: aliceblue;
+}
+
+/* Lista de Alimentos */
+.suggestions h2 {
+    margin-bottom: 15px;
+    color: var(--detalhes2);
+}
+/* Adicione ao seu arquivo styles.css */
+.food-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem;
+}
+
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 5rem;
+    background-color: aliceblue;
+    margin-bottom: 1.3rem;
+    height: 2rem;
+    
+}
+
+
+
+.food-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: aliceblue;
+    color: #333;
+    text-align: left;
+    cursor: pointer;
+    
+}
+
+.food-btn:hover {
+    background-color: aliceblue;
+    box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.1);
+    font-weight: bold;
+    
+}
+
+.food-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.add-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--detalhes1);
+}
+
+/* Efeito ao clicar */
+.food-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+    background-color: #dee2e6;
+}
+
+.food-name {
+    flex-grow: 1;
+}
+.suggestions ul{
+    background-color: #deeede;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.175);
+}
+.food-name{
+    padding: 0 1rem
+}
+
+
+
+.add-btn {
+    background: var(--detalhes2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.add-btn:hover {
+    background: #878a87;
+}
+
+.food-list {
+ 
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+}
+
+.food-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.food-item:first-child{
+    margin-top: 0.5rem;
+}
+
+.food-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+
+.food-item input[type="checkbox"] {
+    margin-right: 10px;
+}
