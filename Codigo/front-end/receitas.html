@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Receitas | NUTRI TECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand" href="#">NUTRI TECH</a>
+    </div>
+  </nav>
+
+  <main class="container mt-4">
+    <h1 class="mb-4 text-center">Receitas Saudáveis e Saborosas</h1>
+
+    <section id="receitas-section" class="mb-5">
+      <!-- 8 RECEITAS -->
+      <article class="card mb-3" data-receita="frango-grelhado">
+        <div class="card-body">
+          <h3 class="card-title">Frango Grelhado com Quinoa</h3>
+          <p><strong>Ingredientes:</strong> Peito de frango, quinoa, legumes no vapor.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="omelete">
+        <div class="card-body">
+          <h3 class="card-title">Omelete de Claras com Espinafre</h3>
+          <p><strong>Ingredientes:</strong> Claras de ovo, espinafre, tomate, cebola.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="salmao-assado">
+        <div class="card-body">
+          <h3 class="card-title">Salmão Assado com Batata Doce</h3>
+          <p><strong>Ingredientes:</strong> Filé de salmão, batata doce, azeite, ervas.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="wrap-integral">
+        <div class="card-body">
+          <h3 class="card-title">Wrap Integral de Frango</h3>
+          <p><strong>Ingredientes:</strong> Pão integral, frango desfiado, alface, iogurte.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="salada-grao-bico">
+        <div class="card-body">
+          <h3 class="card-title">Salada de Grão-de-Bico com Atum</h3>
+          <p><strong>Ingredientes:</strong> Grão-de-bico, atum, cebola roxa, salsinha.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="panqueca-banana">
+        <div class="card-body">
+          <h3 class="card-title">Panqueca de Banana Fit</h3>
+          <p><strong>Ingredientes:</strong> Banana, aveia, ovo, canela.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="quiche-aveia">
+        <div class="card-body">
+          <h3 class="card-title">Mini Quiche de Aveia e Ricota</h3>
+          <p><strong>Ingredientes:</strong> Aveia, ricota, ovos, espinafre.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+
+      <article class="card mb-3" data-receita="arroz-couveflor">
+        <div class="card-body">
+          <h3 class="card-title">Arroz de Couve-flor com Legumes</h3>
+          <p><strong>Ingredientes:</strong> Couve-flor, cenoura, abobrinha, alho.</p>
+          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="detalhesModal" tabindex="-1" aria-labelledby="detalhesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="detalhesModalLabel">Detalhes da Receita</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <h2 id="titulo-receita" class="mb-3"></h2>
+          <h5>Macronutrientes por porção</h5>
+          <ul id="macros-list" class="mb-3"></ul>
+          <h5>Ingredientes</h5>
+          <ul id="ingredientes-list" class="mb-3"></ul>
+          <h5>Modo de Preparo</h5>
+          <p id="modo-preparo-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const receitas = {
+      "frango-grelhado": {
+        titulo: "Frango Grelhado com Quinoa",
+        macros: ["Proteínas: 35g", "Carboidratos: 20g", "Gorduras: 10g"],
+        ingredientes: ["Peito de frango", "Quinoa", "Legumes no vapor"],
+        preparo: "Grelhe o frango, cozinhe a quinoa e os legumes no vapor."
+      },
+      "omelete": {
+        titulo: "Omelete de Claras com Espinafre",
+        macros: ["Proteínas: 20g", "Carboidratos: 5g", "Gorduras: 8g"],
+        ingredientes: ["Claras de ovo", "Espinafre", "Tomate", "Cebola"],
+        preparo: "Bata as claras, adicione os ingredientes e leve à frigideira."
+      },
+      "salmao-assado": {
+        titulo: "Salmão Assado com Batata Doce",
+        macros: ["Proteínas: 30g", "Carboidratos: 25g", "Gorduras: 15g"],
+        ingredientes: ["Filé de salmão", "Batata doce", "Azeite", "Ervas"],
+        preparo: "Tempere o salmão e asse com batata doce fatiada por 25min a 200ºC."
+      },
+      "wrap-integral": {
+        titulo: "Wrap Integral de Frango",
+        macros: ["Proteínas: 28g", "Carboidratos: 20g", "Gorduras: 6g"],
+        ingredientes: ["Pão integral", "Frango desfiado", "Alface", "Iogurte natural"],
+        preparo: "Recheie o wrap com frango e salada. Enrole e sirva frio ou grelhado."
+      },
+      "salada-grao-bico": {
+        titulo: "Salada de Grão-de-Bico com Atum",
+        macros: ["Proteínas: 22g", "Carboidratos: 18g", "Gorduras: 9g"],
+        ingredientes: ["Grão-de-bico cozido", "Atum", "Cebola roxa", "Salsinha"],
+        preparo: "Misture todos os ingredientes, tempere com limão, sal e azeite."
+      },
+      "panqueca-banana": {
+        titulo: "Panqueca de Banana Fit",
+        macros: ["Proteínas: 10g", "Carboidratos: 28g", "Gorduras: 5g"],
+        ingredientes: ["Banana", "Aveia", "Ovo", "Canela"],
+        preparo: "Misture os ingredientes e frite em frigideira antiaderente até dourar."
+      },
+      "quiche-aveia": {
+        titulo: "Mini Quiche de Aveia e Ricota",
+        macros: ["Proteínas: 14g", "Carboidratos: 12g", "Gorduras: 8g"],
+        ingredientes: ["Aveia", "Ricota", "Ovos", "Espinafre refogado"],
+        preparo: "Misture tudo, distribua em forminhas e asse por 20min a 180ºC."
+      },
+      "arroz-couveflor": {
+        titulo: "Arroz de Couve-flor com Legumes",
+        macros: ["Proteínas: 6g", "Carboidratos: 12g", "Gorduras: 3g"],
+        ingredientes: ["Couve-flor triturada", "Cenoura", "Abobrinha", "Alho"],
+        preparo: "Refogue o alho, adicione a couve-flor ralada e os legumes até dourar."
+      }
+    };
+
+    document.querySelectorAll('.btn-ver-detalhes').forEach(botao => {
+      botao.addEventListener('click', () => {
+        const artigo = botao.closest('article');
+        const id = artigo.getAttribute('data-receita');
+        const receita = receitas[id];
+
+        document.getElementById('titulo-receita').textContent = receita.titulo;
+
+        const listaMacros = document.getElementById('macros-list');
+        listaMacros.innerHTML = "";
+        receita.macros.forEach(m => {
+          const li = document.createElement('li');
+          li.textContent = m;
+          listaMacros.appendChild(li);
+        });
+
+        const listaIng = document.getElementById('ingredientes-list');
+        listaIng.innerHTML = "";
+        receita.ingredientes.forEach(i => {
+          const li = document.createElement('li');
+          li.textContent = i;
+          listaIng.appendChild(li);
+        });
+
+        document.getElementById('modo-preparo-text').textContent = receita.preparo;
+
+        const modal = new bootstrap.Modal(document.getElementById('detalhesModal'));
+        modal.show();
+      });
+    });
+  </script>
+</body>
+</html>
