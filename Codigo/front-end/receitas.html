@@ -7,9 +7,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/gerais_diario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/receitas.css">
 </head>
 <body>
-  <header>
+  <div class="container">
+  <header class="app-header">
+    <h1 class="mb-4 text-center">Receitas</h1>
     <nav>
         <ul>
             <li><a href="/diario_alimentar">Diário</a></li>
@@ -21,74 +24,93 @@
   </header>
 
   <main class="container mt-4">
-    <h1 class="mb-4 text-center">Receitas Saudáveis e Saborosas</h1>
+    
 
-    <section id="receitas-section" class="mb-5">
-      <!-- 8 RECEITAS -->
-      <article class="card mb-3" data-receita="frango-grelhado">
-        <div class="card-body">
-          <h3 class="card-title">Frango Grelhado com Quinoa</h3>
-          <p><strong>Ingredientes:</strong> Peito de frango, quinoa, legumes no vapor.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+    <section id="receitas-section" class="row g-4">
 
-      <article class="card mb-3" data-receita="omelete">
-        <div class="card-body">
-          <h3 class="card-title">Omelete de Claras com Espinafre</h3>
-          <p><strong>Ingredientes:</strong> Claras de ovo, espinafre, tomate, cebola.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="frango-grelhado">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Frango Grelhado com Quinoa</h3>
+        <p><strong>Ingredientes:</strong> Peito de frango, quinoa, legumes no vapor.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
 
-      <article class="card mb-3" data-receita="salmao-assado">
-        <div class="card-body">
-          <h3 class="card-title">Salmão Assado com Batata Doce</h3>
-          <p><strong>Ingredientes:</strong> Filé de salmão, batata doce, azeite, ervas.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="omelete">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Omelete de Claras com Espinafre</h3>
+        <p><strong>Ingredientes:</strong> Claras de ovo, espinafre, tomate, cebola.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
 
-      <article class="card mb-3" data-receita="wrap-integral">
-        <div class="card-body">
-          <h3 class="card-title">Wrap Integral de Frango</h3>
-          <p><strong>Ingredientes:</strong> Pão integral, frango desfiado, alface, iogurte.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="salmao-assado">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Salmão Assado com Batata Doce</h3>
+        <p><strong>Ingredientes:</strong> Filé de salmão, batata doce, azeite, ervas.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
 
-      <article class="card mb-3" data-receita="salada-grao-bico">
-        <div class="card-body">
-          <h3 class="card-title">Salada de Grão-de-Bico com Atum</h3>
-          <p><strong>Ingredientes:</strong> Grão-de-bico, atum, cebola roxa, salsinha.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="wrap-integral">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Wrap Integral de Frango</h3>
+        <p><strong>Ingredientes:</strong> Pão integral, frango desfiado, alface, iogurte.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
 
-      <article class="card mb-3" data-receita="panqueca-banana">
-        <div class="card-body">
-          <h3 class="card-title">Panqueca de Banana Fit</h3>
-          <p><strong>Ingredientes:</strong> Banana, aveia, ovo, canela.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="salada-grao-bico">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Salada de Grão-de-Bico com Atum</h3>
+        <p><strong>Ingredientes:</strong> Grão-de-bico, atum, cebola roxa, salsinha.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
 
-      <article class="card mb-3" data-receita="quiche-aveia">
-        <div class="card-body">
-          <h3 class="card-title">Mini Quiche de Aveia e Ricota</h3>
-          <p><strong>Ingredientes:</strong> Aveia, ricota, ovos, espinafre.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="panqueca-banana">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Panqueca de Banana Fit</h3>
+        <p><strong>Ingredientes:</strong> Banana, aveia, ovo, canela.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
 
-      <article class="card mb-3" data-receita="arroz-couveflor">
-        <div class="card-body">
-          <h3 class="card-title">Arroz de Couve-flor com Legumes</h3>
-          <p><strong>Ingredientes:</strong> Couve-flor, cenoura, abobrinha, alho.</p>
-          <button class="btn btn-success btn-ver-detalhes">Ver detalhes</button>
-        </div>
-      </article>
-    </section>
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="quiche-aveia">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Mini Quiche de Aveia e Ricota</h3>
+        <p><strong>Ingredientes:</strong> Aveia, ricota, ovos, espinafre.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
+
+  <article class="col-md-6 col-lg-4">
+    <div class="card recipe-card h-100 shadow-sm border-0" data-receita="arroz-couveflor">
+      <div class="card-body">
+        <h3 class="card-title fw-semibold text-success">Arroz de Couve-flor com Legumes</h3>
+        <p><strong>Ingredientes:</strong> Couve-flor, cenoura, abobrinha, alho.</p>
+        <button class="btn btn-outline-success rounded-pill w-100 btn-ver-detalhes">Ver detalhes</button>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+
   </main>
 
   <!-- MODAL -->
@@ -110,6 +132,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <footer class="footer">
@@ -207,7 +230,7 @@
 
     document.querySelectorAll('.btn-ver-detalhes').forEach(botao => {
       botao.addEventListener('click', () => {
-        const artigo = botao.closest('article');
+        const artigo = botao.closest('[data-receita]');
         const id = artigo.getAttribute('data-receita');
         const receita = receitas[id];
 

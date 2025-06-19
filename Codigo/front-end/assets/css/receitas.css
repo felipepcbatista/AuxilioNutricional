@@ -1,0 +1,33 @@
+#receitas-section .recipe-card {
+  border-radius: 1rem;
+  background-color: #e6f4ea91;
+  color: #333333;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+#receitas-section .recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+#receitas-section .recipe-card p {
+  font-size: 0.95rem;
+  color: #333333;
+}
+
+
+#receitas-section .recipe-card button {
+  color: aliceblue;
+  background-color: var(--detalhes2);
+}
+
+
+#receitas-section .recipe-card button:hover {
+  color: aliceblue;
+  background-color: #051d40c9;
+}
+
