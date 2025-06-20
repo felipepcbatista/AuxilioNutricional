@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTech - Configurações do Perfil</title>
+    <link rel="stylesheet" href="styles-perfilnutri.css">
+
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            
+            <img src="../img/logoNutriTech.png" alt="NutriTech Logo" class="logo">
+            <h1 style="color: #A0C49D;">Configurações do Perfil</h1>
+            <img id="profilePhoto" src="https://picsum.photos.com/150/150" alt="Foto de Perfil">
+            <div class="upload-btn-wrapper">
+                <button class="btn-upload">EDITAR FOTO</button>
+                <input type="file" id="photoUpload" accept="image/*" />
+            </div>
+            
+        </div>
+
+        <form id="profileForm">
+            <div class="form-section">
+                <h3>Informações Pessoais</h3>
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="biografia">Biografia:</label>
+                    <textarea id="biografia" name="biografia"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Especializações</h3>
+                <div class="form-group">
+                    <select id="especializacoes" multiple>
+                        </select>
+                    <p style="color: #5a4f4f; font-size: 0.9em; margin-top: 5px;">Segure Ctrl e Clique com o botão esquedo do mouse para selecionar múltiplas opções.</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Horários de Atendimento</h3>
+                <div id="horariosAtendimento">
+                    </div>
+                <button type="button" class="add-horario-btn" id="openAddHorarioModal">Adicionar Horário</button>
+            </div>
+
+            <div class="form-section">
+                <h3>Contato Profissional</h3>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="celular">Celular:</label>
+                    <input type="text" id="celular" name="celular" placeholder="(DD) XXXXX-XXXX">
+                </div>
+                <div class="form-group">
+                    <label for="instagram">Instagram:</label>
+                    <input type="text" id="instagram" name="instagram" placeholder="@seuinstagram">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Salvar Alterações</button>
+                <button type="button" class="cancel-btn" onclick="window.location.reload()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="addHorarioModal" class="add-horario-modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h4>Adicionar Novo Horário</h4>
+            <div class="form-group">
+                <label for="diaSemana">Dia da Semana:</label>
+                <select id="diaSemana">
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                    <option value="sabado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="horaInicio">Hora Início:</label>
+                <input type="time" id="horaInicio" required>
+            </div>
+            <div class="form-group">
+                <label for="horaFim">Hora Fim:</label>
+                <input type="time" id="horaFim" required>
+            </div>
+            <button id="saveNewHorario">Adicionar Horário</button>
+        </div>
+    </div>
+
+
+    <script src="script-perfilnutri.js"></script>
+</body>
+</html>

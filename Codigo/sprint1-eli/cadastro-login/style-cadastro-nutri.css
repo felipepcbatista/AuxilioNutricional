@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E6F4EA; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cadastro-box {
+    background-color: #F2F3F7; 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; 
+    text-align: center;
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color:#051D40; 
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="date"],
+.input-group input[type="cel"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    color: #333333;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.btn.primary {
+    background-color: #008000; 
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #006400; 
+}
+
+.login-link {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.login-link a {
+    color: #9F2B00; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.login-link a:hover {
+    color: #8B2400; 
+    text-decoration: underline;
+}
+
+
+@media (max-width: 500px) {
+    .cadastro-box {
+        margin: 0;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .input-group input {
+        padding: 12px 10px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+}
