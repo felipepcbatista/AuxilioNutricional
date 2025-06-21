@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriTech - Página Principal</title>
+
+  <!-- Linkando o CSS externo -->
+  <link rel="stylesheet" href="assets/css/marcar_consulta.css">
+</head>
+
+<body>
+
+<div class="perfil-nutri">
+  <div class="setas">
+    <button onclick="alterarPerfil(-1)">&#8592;</button>
+    <button onclick="alterarPerfil(1)">&#8594;</button>
+  </div>
+  <div class="perfil-content">
+    <div class="info-nutri">
+      <h2 id="nomeNutri">Dra. Ana Souza</h2>
+      <p class="especializacao" id="especializacaoNutri"><strong>Especialização:</strong> Nutrição Clínica</p>
+      <p class="descricao" id="descricaoNutri">Experiência em emagrecimento saudável e reeducação alimentar.</p>
+      <button class="confirm-button" onclick="selecionarNutricionista()">Selecionar Nutricionista</button>
+      <p id="nutriSelecionadoTexto" style="margin-top:10px; font-weight: bold;"></p>
+    </div>
+  </div>
+</div>
+
+<div class="result-box">
+  <h3>Agenda da Nutricionista</h3>
+  <div class="calendar">
+    <div class="calendar-header">
+      <button onclick="changeMonth(-1)">&#8592;</button>
+      <h3 id="month-year">MÊS</h3>
+      <button onclick="changeMonth(1)">&#8594;</button>
+    </div>
+    <table id="calendar-table"></table>
+  </div>
+
+  <div class="horarios">
+    <div class="calendar-header">
+      <h3 id="weekday">Selecione um dia</h3>
+    </div>
+    <div id="horarios-list">
+      <p onclick="selectHorario(this)">09:00</p>
+      <p onclick="selectHorario(this)">10:00</p>
+      <p onclick="selectHorario(this)">11:00</p>
+      <p onclick="selectHorario(this)">12:00</p>
+      <p onclick="selectHorario(this)">13:00</p>
+    </div>
+    <button class="confirm-button" onclick="confirmarAgendamento()">Confirmar</button>
+  </div>
+
+  <div class="result-box">
+    <h3>Consulta Agendada:</h3>
+    <p id="resultado">Nenhum agendamento ainda.</p>
+    <button id="cancelarBtn" class="confirm-button" onclick="cancelarAgendamento()" style="display: none; margin-top: 10px;">Desmarcar Consulta</button>
+  </div>
+</div>
+
+<div class="result-box">
+  <h3>➕ Adicionar Feedback</h3>
+  <p><label>Nome: <input type="text" id="feedbackNome" placeholder="Seu nome" style="width: 100%; padding: 8px;"/></label></p>
+  <p><label>Comentário: <textarea id="feedbackTexto" placeholder="Escreva seu feedback..." style="width: 100%; padding: 8px;"></textarea></label></p>
+  <button class="confirm-button" onclick="adicionarFeedback()">Adicionar</button>
+</div>
+
+<div class="result-box">
+  <h3>🗣️ Feedbacks de Clientes</h3>
+  <div id="listaFeedbacks"></div>
+</div>
+
+<!-- Linkando o JS externo -->
+<script src="assets/js/marcar_consulta.js"></script>
+
+</body>
+</html>

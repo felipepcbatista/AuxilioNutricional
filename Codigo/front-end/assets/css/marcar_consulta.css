@@ -1,0 +1,80 @@
+:root {
+    --verde-principal: #4caf50;
+    --verde-hover: #43a047;
+    --cinza-fundo: #f0f4f7;
+    --cinza-leve: #e0e0e0;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  * { box-sizing: border-box; }
+  body {
+    font-family: var(--fonte-principal);
+    background: var(--cinza-fundo);
+    margin: 0;
+    padding: 0;
+  }
+  .perfil-nutri, .result-box {
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 25px;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .perfil-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .info-nutri h2 { margin: 0; font-size: 1.5rem; }
+  .especializacao { font-style: italic; margin: 10px 0; }
+  .descricao { color: #444; }
+  .setas { text-align: center; margin-bottom: 10px; }
+  .calendar-header button, .confirm-button {
+    font-size: 1rem;
+    background: var(--verde-principal);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  .calendar-header button:hover, .confirm-button:hover {
+    background: var(--verde-hover);
+  }
+  .calendar, .horarios {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+  }
+  .calendar table { width: 100%; border-collapse: collapse; }
+  .calendar td {
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .calendar td:hover { background-color: var(--cinza-leve); }
+  .calendar td.selected {
+    background-color: #9ffca4;
+    font-weight: bold;
+  }
+  .calendar td.disabled {
+    color: #ccc;
+    pointer-events: none;
+  }
+  #horarios-list p {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  #horarios-list p:hover { background-color: var(--cinza-leve); }
+  #horarios-list p.selected {
+    background-color: #9ffca4;
+    font-weight: bold;
+  }
