@@ -37,4 +37,19 @@ Desenvolver um site de auxílio nutricional que ofereça informações confiáve
 
 ## Instruções de utilização
 
-[Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.]
+### Requisitos para rodar o site
+
+- [Node.js](https://nodejs.org) instalado na máquina
+
+### Passos para rodar o site
+
+1. Navegue até o diretório do projeto:
+    bash
+    cd pmg-es-2025-1-ti1-2401200-auxilio-nutricional.git
+2. No terminal, execute:
+    - npm install express
+    - npm start
+
+3. Por fim, no navegador:
+    - http://localhost:3001
+
