@@ -4,72 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NutriTech - Página Principal</title>
-
-  <!-- Linkando o CSS externo -->
   <link rel="stylesheet" href="assets/css/marcar_consulta.css">
+  <link rel="stylesheet" href="assets/css/gerais_diario.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+  <div class="container">
+    <header class="app-header">
+      <h1>Agendar Consulta</h1>
+      <nav>
+        <ul>
+            <li><a href="/diario_alimentar">Diário</a></li>
+            <li><a href="/informacoes">Informações Nutricionais</a></li>
+            <li><a href="/receitas">Receitas</a></li>
+            <li><a href="/marcar_consulta" class="active">Agendar Consulta</a></li>
+            <li><a href="/user_profile"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+    </header>
+        <div class="perfil-nutri">
+          <div class="setas">
+            <button onclick="alterarPerfil(-1)">&#8592;</button>
+            <button onclick="alterarPerfil(1)">&#8594;</button>
+          </div>
+          <div class="perfil-content">
+            <div class="info-nutri">
+              <h2 id="nomeNutri">Dra. Ana Souza</h2>
+              <p class="especializacao" id="especializacaoNutri"><strong>Especialização:</strong> Nutrição Clínica</p>
+              <p class="descricao" id="descricaoNutri">Experiência em emagrecimento saudável e reeducação alimentar.</p>
+              <button class="confirm-button" onclick="selecionarNutricionista()">Selecionar Nutricionista</button>
+              <p id="nutriSelecionadoTexto" style="margin-top:10px; font-weight: bold;"></p>
+            </div>
+          </div>
+        </div>
 
-<div class="perfil-nutri">
-  <div class="setas">
-    <button onclick="alterarPerfil(-1)">&#8592;</button>
-    <button onclick="alterarPerfil(1)">&#8594;</button>
-  </div>
-  <div class="perfil-content">
-    <div class="info-nutri">
-      <h2 id="nomeNutri">Dra. Ana Souza</h2>
-      <p class="especializacao" id="especializacaoNutri"><strong>Especialização:</strong> Nutrição Clínica</p>
-      <p class="descricao" id="descricaoNutri">Experiência em emagrecimento saudável e reeducação alimentar.</p>
-      <button class="confirm-button" onclick="selecionarNutricionista()">Selecionar Nutricionista</button>
-      <p id="nutriSelecionadoTexto" style="margin-top:10px; font-weight: bold;"></p>
+        <div class="result-box">
+          <h3>Selecione o dia desejado:</h3>
+          <div class="calendar">
+            <div class="calendar-header">
+              <button onclick="changeMonth(-1)">&#8592;</button>
+              <h3 id="month-year">MÊS</h3>
+              <button onclick="changeMonth(1)">&#8594;</button>
+            </div>
+            <table id="calendar-table"></table>
+          </div>
+
+          <div class="horarios">
+            <div class="calendar-header">
+              <h3 id="weekday">Horários:</h3>
+            </div>
+            <div id="horarios-list">
+              <p onclick="selectHorario(this)">09:00</p>
+              <p onclick="selectHorario(this)">10:00</p>
+              <p onclick="selectHorario(this)">11:00</p>
+              <p onclick="selectHorario(this)">12:00</p>
+              <p onclick="selectHorario(this)">13:00</p>
+            </div>
+            <button class="confirm-button" onclick="confirmarAgendamento()">Confirmar</button>
+          </div>
+
+          <div class="result-box">
+            <h3>Consulta Agendada:</h3>
+            <p id="resultado">Nenhum agendamento ainda.</p>
+            <button id="cancelarBtn" class="confirm-button" onclick="cancelarAgendamento()" style="display: none; margin-top: 10px;">Desmarcar Consulta</button>
+          </div>
+        </div>
+
+        <div class="result-box">
+          <h3>➕ Adicionar Feedback</h3>
+          <p><label>Nome: <input type="text" id="feedbackNome" placeholder="Seu nome" style="width: 100%; padding: 8px;"/></label></p>
+          <p><label>Comentário: <textarea id="feedbackTexto" placeholder="Escreva seu feedback..." style="width: 100%; padding: 8px;"></textarea></label></p>
+          <button class="confirm-button" onclick="adicionarFeedback()">Adicionar</button>
+        </div>
+
+        <div class="result-box">
+          <h3>🗣️ Feedbacks de Clientes</h3>
+          <div id="listaFeedbacks"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="result-box">
-  <h3>Agenda da Nutricionista</h3>
-  <div class="calendar">
-    <div class="calendar-header">
-      <button onclick="changeMonth(-1)">&#8592;</button>
-      <h3 id="month-year">MÊS</h3>
-      <button onclick="changeMonth(1)">&#8594;</button>
-    </div>
-    <table id="calendar-table"></table>
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
   </div>
-
-  <div class="horarios">
-    <div class="calendar-header">
-      <h3 id="weekday">Selecione um dia</h3>
-    </div>
-    <div id="horarios-list">
-      <p onclick="selectHorario(this)">09:00</p>
-      <p onclick="selectHorario(this)">10:00</p>
-      <p onclick="selectHorario(this)">11:00</p>
-      <p onclick="selectHorario(this)">12:00</p>
-      <p onclick="selectHorario(this)">13:00</p>
-    </div>
-    <button class="confirm-button" onclick="confirmarAgendamento()">Confirmar</button>
-  </div>
-
-  <div class="result-box">
-    <h3>Consulta Agendada:</h3>
-    <p id="resultado">Nenhum agendamento ainda.</p>
-    <button id="cancelarBtn" class="confirm-button" onclick="cancelarAgendamento()" style="display: none; margin-top: 10px;">Desmarcar Consulta</button>
-  </div>
-</div>
-
-<div class="result-box">
-  <h3>➕ Adicionar Feedback</h3>
-  <p><label>Nome: <input type="text" id="feedbackNome" placeholder="Seu nome" style="width: 100%; padding: 8px;"/></label></p>
-  <p><label>Comentário: <textarea id="feedbackTexto" placeholder="Escreva seu feedback..." style="width: 100%; padding: 8px;"></textarea></label></p>
-  <button class="confirm-button" onclick="adicionarFeedback()">Adicionar</button>
-</div>
-
-<div class="result-box">
-  <h3>🗣️ Feedbacks de Clientes</h3>
-  <div id="listaFeedbacks"></div>
-</div>
+</footer>
 
 <!-- Linkando o JS externo -->
 <script src="assets/js/marcar_consulta.js"></script>
