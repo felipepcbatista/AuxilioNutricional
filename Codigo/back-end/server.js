@@ -27,6 +27,8 @@ app.get('/agenda', (req, res) => res.sendFile(path.join(__dirname, '../front-end
 app.get('/perfilnutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'perfilnutri.html')));
 app.get('/receitas_nutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'receitas_nutri.html')));
 app.get('/marcar_consulta', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'marcar_consulta.html')));
+app.get('/calculadoras', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'calculadoras.html')));
+app.get('/evolucao_usuario', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'evolucao_usuario.html')));
 
 // ------------------------- Função para ler e salvar db.json ------------------------- //
 const dbPath = path.join(__dirname, '../front-end/data/db.json');
@@ -157,6 +159,39 @@ app.get('/api/usuarios', (req, res) => {
     res.status(500).json({ error: 'Erro ao carregar usuários' });
   }
 });
+
+// ------------------------- API: Evolução do Usuário ------------------------- //
+
+// Obter dados da evolução
+app.get('/api/evolucao', (req, res) => {
+  const db = readDB();
+  res.json(db.evolucao || []);
+});
+
+// Adicionar novo registro de evolução
+app.post('/api/evolucao', (req, res) => {
+  const { data, peso } = req.body;
+
+  if (!data || !peso) {
+    return res.status(400).json({ error: 'Data e peso são obrigatórios.' });
+  }
+
+  const db = readDB();
+
+  if (!db.evolucao) db.evolucao = [];
+
+  const novaEntrada = {
+    id: Date.now(),
+    data,
+    peso: parseFloat(peso)
+  };
+
+  db.evolucao.push(novaEntrada);
+  saveDB(db);
+
+  res.status(201).json(novaEntrada);
+});
+
 
 
 // ------------------------- Iniciar servidor ------------------------- //

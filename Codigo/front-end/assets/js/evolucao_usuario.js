@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/dados";
+const API_URL = "http://localhost:3001/api/evolucao";
 
 async function buscarDados() {
   const resposta = await fetch(API_URL);
@@ -12,35 +12,63 @@ async function atualizarGrafico() {
   const linha = document.getElementById("linha");
   const area = document.getElementById("area");
   const datas = document.getElementById("datas");
+  const eixoY = document.getElementById("eixoY");
 
   pontos.innerHTML = "";
   datas.innerHTML = "";
+  eixoY.innerHTML = "";
 
   const largura = 500;
-  const altura = 200;
+  const alturaUtil = 200;      // Altura útil do gráfico
   const x0 = 50;
-  const y0 = 250;
+  const y0 = 250;              // Base inferior (onde o Y=0 no gráfico)
+  const yMin = 0;              // Valor mínimo do eixo Y
+  const yMax = 150;            // Valor máximo do eixo Y
+
   const passoX = largura / (dados.length - 1);
   const pontosLinha = [];
   let areaFechada = "";
 
+  // === CRIAÇÃO DAS LINHAS DE GRADE E LABELS DO EIXO Y ===
+  const numLinhas = 5;  // Marcações: 0, 30, 60, 90, 120, 150
+  for (let i = 0; i <= numLinhas; i++) {
+    const valor = yMin + ((yMax - yMin) / numLinhas) * i;
+    const y = y0 - (i / numLinhas) * alturaUtil;
+
+    eixoY.innerHTML += `<line x1="${x0}" y1="${y}" x2="${x0 + largura}" y2="${y}" stroke="#9F2B00" stroke-width="1" stroke-opacity="0.3" />`;
+    eixoY.innerHTML += `<text x="${x0 - 10}" y="${y + 5}" text-anchor="end" font-size="14" fill="#051D40" font-family="Arial, Helvetica, sans-serif">${Math.round(valor)}</text>`;
+  }
+
+  // === PLOTAGEM DOS PONTOS DO GRÁFICO ===
   dados.forEach((d, i) => {
     const x = x0 + i * passoX;
-    const y = y0 - (d.peso - 50) * 4;
 
-    pontos.innerHTML += `<circle cx="${x}" cy="${y}" r="6" fill="#008000"/>`;
+    // Novo cálculo Y proporcional ao intervalo de 0 a 150 kg
+    const y = y0 - ((d.peso - yMin) / (yMax - yMin)) * alturaUtil;
+
+    pontos.innerHTML += `<circle cx="${x}" cy="${y}" r="6" fill="#008000">
+      <title>Data: ${d.data}\nPeso: ${d.peso} kg</title>
+    </circle>`;
+
     datas.innerHTML += `<text x="${x}" y="270">${d.data.slice(5)}</text>`;
     pontosLinha.push(`${x},${y}`);
   });
 
   linha.setAttribute("points", pontosLinha.join(" "));
-  areaFechada = pontosLinha.concat(`${x0 + (dados.length - 1) * passoX},250`, `${x0},250`).join(" ");
+
+  // Fechamento da área
+  areaFechada = pontosLinha.concat(
+    `${x0 + (dados.length - 1) * passoX},${y0}`,
+    `${x0},${y0}`
+  ).join(" ");
   area.setAttribute("points", areaFechada);
 }
+
 
 async function atualizarMudancas() {
   const dados = await buscarDados();
   const lista = document.getElementById("mudancas");
+
   if (dados.length < 2) {
     lista.innerHTML = `<li>Adicione mais dados para ver as mudanças.</li>`;
     return;
@@ -85,4 +113,3 @@ document.getElementById("form").addEventListener("submit", async (e) => {
 
 atualizarGrafico();
 atualizarMudancas();
-
