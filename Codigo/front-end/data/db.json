@@ -81,6 +81,24 @@
       },
       "foto_perfil": "",
       "senha": "senha_nutri_hash"
+    },
+    {
+      "nome": "Felipe Paz Carvalho Batista",
+      "email": "Felipepaz23@gmail.com",
+      "cpf": "020.647.116-53",
+      "crn": "12345",
+      "celular": "31983137875",
+      "senha": "felipe",
+      "id": "2"
+    },
+    {
+      "nome": "Eli Junior",
+      "email": "elijunior@gmail.com",
+      "cpf": "020.647.116-71",
+      "crn": "12346",
+      "celular": "31983137874",
+      "senha": "eli",
+      "id": "3"
     }
   ],
   "alimentos": [
