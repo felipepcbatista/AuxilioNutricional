@@ -14,13 +14,17 @@
   <div class="container">
     <header>
       <h1>Meu Perfil</h1>
+      <button class="menu-toggle" aria-label="Abrir menu">
+          <i class="fa fa-bars"></i>
+      </button>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="/diario_alimentar">Diário</a></li>
                 <li><a href="/informacoes">Informações Nutricionais</a></li>
                 <li><a href="/receitas">Receitas</a></li>
                 <li><a href="/marcar_consulta">Agendar Consulta</a></li>
                 <li><a href="/evolucao_usuario">Minha Evolução</a></li>
+                <li><a href="/calculadoras-user">Calculadoras</a></li>
                 <li><a href="/user_profile" class="active"><i class="fa-solid fa-user"></i></a></li>
             </ul>
         </nav>
@@ -82,6 +86,10 @@
             <i class="fa-solid fa-check save-icon" onclick="salvarCampo('idade')" style="display:none;"></i>
             </li>
         </ul>
+              <div class="account-actions">
+        <button class="logout-button" onclick="logout()">Sair da Conta</button>
+        <button class="delete-button" onclick="excluirConta()">Excluir Conta</button>
+      </div>
       </div>
     </div>
   </main>
@@ -123,7 +131,7 @@
       <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
     </div>
   </footer>
-
+<script src="assets/js/app.js"></script>
   <script>
   function carregarDados() {
     const campos = ["nickname", "peso", "altura", "objetivo", "idade"];
@@ -177,6 +185,41 @@
     saveIcon.style.display = "none";
   }
 
+  function logout() {
+    if (confirm("Deseja sair da conta?")) {
+      window.location.href = "/";
+    }
+  }
+
+  async function excluirConta() {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    const id = user?.id;
+
+    if (!id) {
+      alert("Erro: ID do usuário não encontrado.");
+      return;
+    }
+
+    const confirmacao = confirm("Tem certeza que deseja excluir sua conta? Essa ação é irreversível.");
+
+    if (!confirmacao) return;
+
+    try {
+      const response = await fetch(`http://localhost:3001/usuarios/${id}`, {
+        method: "DELETE"
+      });
+
+      if (!response.ok) throw new Error("Erro ao excluir conta.");
+
+      alert("Conta excluída com sucesso.");
+      localStorage.clear();
+      sessionStorage.clear();
+      window.location.href = "/";
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao excluir conta. Tente novamente.");
+    }
+  }
   window.onload = carregarDados;
 </script>
 

@@ -44,7 +44,7 @@ formulario.addEventListener("submit", async (e) => {
 
   try {
     // Envia o registro para o JSON Server
-    const response = await fetch("http://localhost:3000/registros", {
+    const response = await fetch("http://localhost:3001/registros", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(registro),
@@ -54,10 +54,9 @@ formulario.addEventListener("submit", async (e) => {
 
     resultadoDiv.style.display = "block";
     resultadoDiv.innerHTML = `
-      <strong>${status === "Saudável" ? "Você está com peso saudável!" : `Você está ${status.toLowerCase()}!`}</strong><br>
+      <strong>${status === "Saudável" ? "Saudável" : `${status}`}</strong><br>
       IMC: ${imc.toFixed(1)}<br>
       TMB: ${Math.round(tmb)} kcal/dia<br>
-      TMB com atividade: ${Math.round(tmbComAtividade)} kcal/dia
     `;
 
     formulario.reset();

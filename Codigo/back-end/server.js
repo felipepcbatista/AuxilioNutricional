@@ -27,7 +27,8 @@ app.get('/agenda', (req, res) => res.sendFile(path.join(__dirname, '../front-end
 app.get('/perfilnutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'perfilnutri.html')));
 app.get('/receitas_nutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'receitas_nutri.html')));
 app.get('/marcar_consulta', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'marcar_consulta.html')));
-app.get('/calculadoras', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'calculadoras.html')));
+app.get('/calculadoras-nutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'calculadoras-nutri.html')));
+app.get('/calculadoras-user', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'calculadoras-user.html')));
 app.get('/evolucao_usuario', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'evolucao_usuario.html')));
 
 // ------------------------- Função para ler e salvar db.json ------------------------- //
@@ -192,6 +193,39 @@ app.post('/api/evolucao', (req, res) => {
   res.status(201).json(novaEntrada);
 });
 
+// ------------------------- API: Salvar registro da calculadora ------------------------- //
+app.post('/registros', (req, res) => {
+  const novoRegistro = req.body;
+
+  const db = readDB();
+  if (!db.registros) db.registros = [];
+
+  novoRegistro.id = db.registros.length + 1;
+  db.registros.push(novoRegistro);
+  saveDB(db);
+
+  res.status(201).json(novoRegistro);
+});
+
+// ------------------------- API: Excluir usuário ------------------------- //
+app.delete('/usuarios/:id', (req, res) => {
+  const { id } = req.params;
+  const db = readDB();
+
+  if (!db.usuarios) {
+    return res.status(404).json({ error: 'Nenhum usuário cadastrado.' });
+  }
+
+  const index = db.usuarios.findIndex(u => u.id === id);
+  if (index === -1) {
+    return res.status(404).json({ error: 'Usuário não encontrado.' });
+  }
+
+  db.usuarios.splice(index, 1);
+  saveDB(db);
+
+  res.json({ message: 'Usuário excluído com sucesso.' });
+});
 
 
 // ------------------------- Iniciar servidor ------------------------- //

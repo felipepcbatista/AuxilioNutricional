@@ -74,3 +74,36 @@ main{
       margin-left: 8px;
       padding: 4px;
     }
+
+    .account-actions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logout-button, .delete-button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-button {
+  background-color: #1d3557;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #0d1b2a;
+}
+
+.delete-button {
+  background-color: #e63946;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0002e;
+}

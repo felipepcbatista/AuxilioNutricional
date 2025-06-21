@@ -156,9 +156,9 @@ td {
     color: var(--detalhes2);
     font-size: 1.2rem;
     display: flex;
-    gap: 6.5rem;
+    gap: 7rem;
     justify-content: end;
-    margin-right: 14.6rem;
+    margin-right: 20rem;
     font-weight: bolder;
 }
 

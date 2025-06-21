@@ -7,18 +7,23 @@
   <link rel="stylesheet" href="assets/css/evolucao_usuario.css"/>
   <link rel="stylesheet" href="assets/css/gerais_diario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
 <body>
   <div class="container">
     <header class="app-header">
       <h1>Minha Evolução</h1>
+      <button class="menu-toggle" aria-label="Abrir menu">
+          <i class="fa fa-bars"></i>
+      </button>
       <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="/diario_alimentar">Diário</a></li>
                     <li><a href="/informacoes">Informações Nutricionais</a></li>
                     <li><a href="/receitas">Receitas</a></li>
                     <li><a href="/marcar_consulta">Agendar Consulta</a></li>
                     <li><a href="/evolucao_usuario" class="active">Minha Evolução</a></li>
+                    <li><a href="/calculadoras-user">Calculadoras</a></li>
                     <li><a href="/user_profile"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </nav>
@@ -65,7 +70,46 @@
     </form>
     </main>
 </div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+  </div>
+</footer>
 
   <script src="assets/js/evolucao_usuario.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

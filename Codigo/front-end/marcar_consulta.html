@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="assets/css/marcar_consulta.css">
   <link rel="stylesheet" href="assets/css/gerais_diario.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
 
 <body>
   <div class="container">
     <header class="app-header">
       <h1>Agendar Consulta</h1>
+      <button class="menu-toggle" aria-label="Abrir menu">
+          <i class="fa fa-bars"></i>
+      </button>
       <nav>
-        <ul>
+        <ul class="nav-links">
             <li><a href="/diario_alimentar">Diário</a></li>
             <li><a href="/informacoes">Informações Nutricionais</a></li>
             <li><a href="/receitas">Receitas</a></li>
             <li><a href="/marcar_consulta" class="active">Agendar Consulta</a></li>
             <li><a href="/evolucao_usuario">Minha Evolução</a></li>
+            <li><a href="/calculadoras-user">Calculadoras</a></li>
             <li><a href="/user_profile"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
@@ -126,6 +131,7 @@
 
 <!-- Linkando o JS externo -->
 <script src="assets/js/marcar_consulta.js"></script>
+<script src="assets/js/app.js"></script>
 
 </body>
 </html>

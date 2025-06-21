@@ -221,3 +221,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     loadNutricionistaData();
 });
+
+     function logout() {
+  if (confirm("Deseja sair da conta?")) {
+    window.location.href = "/";
+  }
+}
+
+async function excluirConta() {
+  const confirmacao = confirm("Tem certeza que deseja excluir sua conta? Esta ação é irreversível.");
+  if (!confirmacao) return;
+
+  try {
+    const id = currentNutricionistaData.id;
+
+    const resposta = await fetch(`http://localhost:3001/nutricionistas/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    if (resposta.ok) {
+      alert("Conta excluída com sucesso.");
+      localStorage.clear();
+      window.location.href = "/";
+    } else {
+      alert("Erro ao excluir conta. Verifique se o servidor está rodando.");
+    }
+  } catch (erro) {
+    console.error("Erro ao excluir conta:", erro);
+    alert("Erro inesperado ao tentar excluir a conta.");
+  }
+}
+

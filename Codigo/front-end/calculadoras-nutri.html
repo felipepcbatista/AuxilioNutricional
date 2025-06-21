@@ -4,11 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadoras Nutricionais</title>
-  <link rel="stylesheet" href="assets/css/calculadoras.css" />
+  <link rel="stylesheet" href="assets/css/gerais_diario.css">  
+  <link rel="stylesheet" href="assets/css/calculadoras.css">
+  <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
 <body>
   <div class="container">
-    <h1>Calculadora de IMC / TMB</h1>
+    <header class="app-header">
+      <nav>
+        <button><a href="/dashboard_nutri" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #ffffff;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+  stroke="#051D40" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 19 5 12 12 5"></polyline>
+  </svg>
+</a>
+</button>
+    </nav>
+      <h1>Calculadoras</h1>
+    </header>
+
+    <div class="main">
+    <h2>Calculadora de IMC / TMB</h2>
     <p>
       Calcule seu índice de massa corporal (IMC), sua taxa metabólica basal (TMB) e o gasto calórico com base no seu nível de atividade física.
     </p>
@@ -54,6 +71,46 @@
       </table>
     </div>
   </div>
+  </div>
+
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+  </div>
+</footer>
 
   <script src="assets/js/calculadoras.js"></script>
 </body>
