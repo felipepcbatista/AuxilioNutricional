@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }));
 
             if (data.tipo === 'nutricionista') {
-                window.location.href = '/calendario-nutricionista';
+                window.location.href = '/dashboard_nutri';
             } else {
-                window.location.href = '/diario_alimentar'; // ajuste conforme necessário
+                window.location.href = '/diario_alimentar';
             }
 
         } catch (error) {

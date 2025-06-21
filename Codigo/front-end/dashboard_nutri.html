@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nutricionista</title>
+    <link rel="stylesheet" href="assets/css/dashboard_nutri.css">
+    <link rel="stylesheet" href="assets/css/gerais_diario.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1 id="welcome-message">Bem-vindo!</h1>
+
+        <div class="card-grid">
+
+            <a href="/pacientes" class="dashboard-card">
+                <div class="icon">👥</div>
+                <h2>Meus Pacientes</h2>
+                <p>Visualize e gerencie seus pacientes.</p>
+            </a>
+
+            <a href="/agenda" class="dashboard-card">
+                <div class="icon">📅</div>
+                <h2>Minha Agenda</h2>
+                <p>Veja seus compromissos e agendamentos.</p>
+            </a>
+
+            <a href="/perfilnutri" class="dashboard-card">
+                <div class="icon">⚙️</div>
+                <h2>Configurar Perfil</h2>
+                <p>Atualize suas informações profissionais.</p>
+            </a>
+
+            <a href="/consultas-agendadas" class="dashboard-card">
+                <div class="icon">🩺</div>
+                <h2>Consultas Agendadas</h2>
+                <p>Gerencie marcações e cancelamentos de consultas.</p>
+            </a>
+
+            <a href="/diario_nutri" class="dashboard-card">
+                <div class="icon">🩺</div>
+                <h2>Diário Alimentar</h2>
+                <p>Registre os alimentos consumidos durante o dia.</p>
+            </a>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="assets/images/logo-NutriTech.png" alt="Logo">
+    </div>
+
+
+    <div class="footer-links">
+      <h3>Sobre</h3>
+      <ul>
+        <li><a href="#">Informações</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h3>Suporte</h3>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Telefone</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const nutriName = localStorage.getItem('nutricionistaNome') || 'Nutricionista';
+        document.getElementById('welcome-message').textContent = `Bem-vindo, ${nutriName}!`;
+    });
+</script>
+</body>
+</html>

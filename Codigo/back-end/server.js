@@ -21,6 +21,10 @@ app.get('/adicionar_alimentos', (req, res) => res.sendFile(path.join(__dirname, 
 app.get('/user_profile', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'user_profile.html')));
 app.get('/receitas', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'receitas.html')));
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'login.html')));
+app.get('/dashboard_nutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'dashboard_nutri.html')));
+app.get('/pacientes', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'pacientes.html')));
+app.get('/agenda', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'agenda.html')));
+app.get('/perfilnutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'perfilnutri.html')));
 
 // ------------------------- Função para ler e salvar db.json ------------------------- //
 const dbPath = path.join(__dirname, '../front-end/data/db.json');
