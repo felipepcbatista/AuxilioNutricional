@@ -1,0 +1,57 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const cpf = document.getElementById('cpf').value;
+        const objetivo = document.getElementById('objetivo').value;
+        const sexo = document.getElementById('sexo').value;
+        const altura = parseInt(document.getElementById('altura').value);
+        const idade = parseInt(document.getElementById('idade').value);
+        const celular = document.getElementById('celular').value;
+        const senha = document.getElementById('senha').value;
+        const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+        // Validação de senha
+        if (senha !== confirmarSenha) {
+            alert('As senhas não coincidem. Por favor, verifique.');
+            return;
+        }
+
+        const novoUsuario = {
+            nome,
+            email,
+            cpf,
+            objetivo,
+            sexo,
+            altura,
+            idade,
+            celular,
+            senha
+        };
+
+        try {
+            const response = await fetch('http://localhost:3001/usuarios', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(novoUsuario)
+            });
+
+            if (response.ok) {
+                alert('Usuário cadastrado com sucesso!');
+                window.location.href = '/login';
+            } else {
+                alert('Erro ao cadastrar usuário. Tente novamente.');
+                console.error('Erro:', await response.text());
+            }
+        } catch (error) {
+            console.error('Erro de conexão:', error);
+            alert('Erro ao conectar com o servidor.');
+        }
+    });
+});

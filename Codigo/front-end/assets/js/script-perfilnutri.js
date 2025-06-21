@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const horaFimInput = document.getElementById('horaFim');
     const saveNewHorarioBtn = document.getElementById('saveNewHorario');
 
-    const API_URL = 'http://localhost:3000/nutricionistas/1'; 
+    const API_URL = 'http://localhost:3001/nutricionistas/1'; 
 
     let currentNutricionistaData = {};
 

@@ -1,4 +1,88 @@
 {
+  "usuarios": [
+    {
+      "id": "user1",
+      "name": "Paciente Exemplo",
+      "email": "paciente@exemplo.com",
+      "password": "senhaPaciente123"
+    },
+    {
+      "id": "nutri1",
+      "name": "Nutricionista Maria",
+      "email": "maria@nutri.com",
+      "password": "senhaNutri123"
+    },
+    {
+      "id": "user2",
+      "name": "João da Silva",
+      "email": "joao@exemplo.com",
+      "password": "123"
+    },
+    {
+      "nome": "Felipe Paz Carvalho Batista",
+      "email": "lipepaz23@gmail.com",
+      "cpf": "020.647.116-51",
+      "objetivo": "ganhar_massa",
+      "sexo": "masculino",
+      "altura": 174,
+      "idade": 18,
+      "celular": "31983137875",
+      "senha": "Felipe",
+      "id": "4"
+    },
+    {
+      "nome": "Luiz",
+      "email": "luiz@gmail.com",
+      "cpf": "020.647.116-50",
+      "objetivo": "perder_peso",
+      "sexo": "nao_informar",
+      "altura": 143,
+      "idade": 18,
+      "celular": "31983137875",
+      "senha": "2l",
+      "id": "5"
+    }
+  ],
+  "nutricionistas": [
+    {
+      "id": "1",
+      "nome": "Dr(a). Nutri Tech",
+      "email": "nutritech@exemplo.com",
+      "cpf": "111.222.333-44",
+      "data_nascimento": "1985-05-10",
+      "crn": "12345/MG",
+      "biografia": "Nutricionista com foco em saúde e bem-estar, ajudando pacientes a alcançar seus objetivos.",
+      "especialidades": [
+        "Nutrição Esportiva",
+        "Nutrição Materno-Infantil",
+        "Nutrição Estética"
+      ],
+      "horarios_atendimento": {
+        "segunda": [
+          "08:00 - 19:30",
+          "12:30 - 18:00"
+        ],
+        "terca": [
+          "08:00 - 12:00"
+        ],
+        "quarta": [
+          "08:00 - 12:00"
+        ],
+        "quinta": [
+          "08:00 - 12:00"
+        ],
+        "sexta": [
+          "08:00 - 12:00"
+        ]
+      },
+      "contato_profissional": {
+        "celular": "(31) 99999-9999",
+        "instagram": "@nutritech_oficial"
+      },
+      "foto_perfil": "",
+      "senha": "senha_nutri_hash"
+    }
+  ],
   "alimentos": [
     {
       "id": 1,
@@ -32,7 +116,7 @@
       "calorias": 165,
       "macronutrientes": {
         "carboidratos": 0,
-        "proteinas": 31.0,
+        "proteinas": 31,
         "gorduras": 3.6,
         "fibras": 0,
         "acucares": 0
@@ -71,7 +155,7 @@
       "calorias": 160,
       "macronutrientes": {
         "carboidratos": 8.5,
-        "proteinas": 2.0,
+        "proteinas": 2,
         "gorduras": 14.7,
         "fibras": 6.7,
         "acucares": 0.7
@@ -84,7 +168,7 @@
       "calorias": 208,
       "macronutrientes": {
         "carboidratos": 0,
-        "proteinas": 27.0,
+        "proteinas": 27,
         "gorduras": 10.5,
         "fibras": 0,
         "acucares": 0
@@ -99,7 +183,7 @@
         "carboidratos": 20.1,
         "proteinas": 1.6,
         "gorduras": 0.1,
-        "fibras": 3.0,
+        "fibras": 3,
         "acucares": 4.2
       },
       "imagem": "batatadoce.jpg"
@@ -122,10 +206,10 @@
       "nome": "Pão Integral",
       "calorias": 247,
       "macronutrientes": {
-        "carboidratos": 41.0,
-        "proteinas": 13.0,
+        "carboidratos": 41,
+        "proteinas": 13,
         "gorduras": 3.4,
-        "fibras": 7.0,
+        "fibras": 7,
         "acucares": 1.8
       },
       "imagem": "paointegral.webp"
@@ -204,7 +288,7 @@
         "proteinas": 0.3,
         "gorduras": 0,
         "fibras": 0.2,
-        "acucares":82.12
+        "acucares": 82.12
       },
       "imagem": "mel.jpg"
     },
@@ -240,7 +324,7 @@
       "calorias": 116,
       "macronutrientes": {
         "carboidratos": 20.1,
-        "proteinas": 9.0,
+        "proteinas": 9,
         "gorduras": 0.4,
         "fibras": 7.9,
         "acucares": 1.8
@@ -347,7 +431,7 @@
         "proteinas": 7.8,
         "gorduras": 42.6,
         "fibras": 10.9,
-        "acucares": 24.0
+        "acucares": 24
       },
       "imagem": "chocolate_amargo.jpg"
     },

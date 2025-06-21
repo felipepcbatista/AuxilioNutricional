@@ -2,14 +2,17 @@
 
 - [Node.js](https://nodejs.org) instalado na máquina
 
-Abra o terminal na pasta do projeto e execute:
-1- npm install express
-2- node Codigo/back-end/server.js
+## Passos
 
-Por fim, digite no navegador:
-3- http://localhost:3001
+1. Navegue até o diretório do projeto:
+    bash
+    cd pmg-es-2025-1-ti1-2401200-auxilio-nutricional.git
+2. No terminal, execute:
+    - npm install express
+    - node Codigo/back-end/server.js
 
-
+3. Por fim, no navegador:
+    - http://localhost:3001
 
 
 
