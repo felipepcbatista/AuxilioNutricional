@@ -28,15 +28,35 @@
       color: #198754;
       font-weight: 500;
     }
+    .app-header button{
+    font-weight: bolder;
+    border: none;
+    background-color: var(--fundo-primario);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+    .app-header a{
+    text-decoration: none;
+}
   </style>
 </head>
 <body>
-
-  <header></header>
-
-  <main class="container mt-5">
+<div class="container">
+  <header class="app-header">
+    <nav>
+        <button><a href="/dashboard_nutri" style="display: flex; align-items: center; gap: 8px; text-decoration: none; color: #ffffff;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none"
+  stroke="#051D40" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="19" y1="12" x2="5" y2="12"></line>
+    <polyline points="12 19 5 12 12 5"></polyline>
+  </svg>
+</a>
+</button>
+    </nav>
     <h1 class="text-center mb-4">Acompanhamento de Pacientes</h1>
-
+  </header>
+  <main class="container mt-5">
     <section id="pacientes-section" class="mb-5">
       <input type="text" id="filtroPaciente" class="form-control mb-4 shadow-sm" placeholder="Filtrar por nome ou meta..." />
       <ul id="listaPacientes" class="list-group shadow-sm"></ul>
@@ -58,7 +78,7 @@
       </div>
     </div>
   </div>
-
+</div>
   <footer class="footer">
   <div class="footer-container">
     <div class="footer-logo">

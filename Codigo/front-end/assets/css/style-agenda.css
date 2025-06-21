@@ -14,6 +14,18 @@ body {
     color: #333333;
 }
 
+.app-header button{
+    font-weight: bolder;
+    border: none;
+    background-color: var(--fundo-primario);
+    font-size: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+    .app-header a{
+    text-decoration: none;
+}
+
 .calendar-container {
     background-color: #F2F3F7;
     padding: 30px;
