@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Nutricional</title>
+  <link rel="stylesheet" href="assets/css/calculadoras.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de IMC / TMB</h1>
+    <p>
+      Calcule seu índice de massa corporal (IMC), sua taxa metabólica basal (TMB) e o gasto calórico com base no seu nível de atividade física.
+    </p>
+
+    <form id="formulario">
+      <label for="altura">Altura (cm):</label>
+      <input type="number" id="altura" required />
+
+      <label for="peso">Peso (kg):</label>
+      <input type="number" id="peso" required />
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" required />
+
+      <label for="genero">Gênero:</label>
+      <select id="genero" required>
+        <option value="Feminino">Feminino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
+
+      <label for="atividade">Nível de atividade física:</label>
+      <select id="atividade" required>
+        <option value="1.2">Sedentário</option>
+        <option value="1.375">Exercícios leves (1–3x/semana)</option>
+        <option value="1.55">Exercícios moderados (3–5x/semana)</option>
+        <option value="1.725">Exercícios intensos (6–7x/semana)</option>
+        <option value="1.9">Exercício muito intenso / trabalho físico</option>
+      </select>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultado" class="alert" style="display: none;"></div>
+
+    <div class="tabela-imc">
+      <h2>Classificação do IMC</h2>
+      <table>
+        <tr><th>IMC</th><th>Classificação</th></tr>
+        <tr><td>Abaixo de 18,5</td><td>Abaixo do peso</td></tr>
+        <tr><td>18,5 – 24,9</td><td>Saudável</td></tr>
+        <tr><td>25,0 – 29,9</td><td>Sobrepeso</td></tr>
+        <tr><td>30,0 ou mais</td><td>Obesidade</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script src="assets/js/calculadoras.js"></script>
+</body>
+</html>
