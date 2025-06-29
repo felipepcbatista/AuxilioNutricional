@@ -29,6 +29,45 @@
       "celular": "31983137875",
       "senha": "2l",
       "id": "5"
+<<<<<<< HEAD
+=======
+    },
+    {
+      "nome": "Felipe Paz Carvalho Batista",
+      "email": "lipepaz23@gmail.com",
+      "cpf": "020.647.116-51",
+      "objetivo": "ganhar_massa",
+      "sexo": "masculino",
+      "altura": 174,
+      "idade": 18,
+      "celular": "31983137875",
+      "senha": "Felipe",
+      "id": "5"
+    },
+    {
+      "nome": "Junior Dias",
+      "email": "junior@gmail.com",
+      "cpf": "10110110152",
+      "objetivo": "melhorar_rendimento",
+      "sexo": "nao_informar",
+      "altura": 158,
+      "idade": 19,
+      "celular": "9899999999",
+      "senha": "1234",
+      "id": "6"
+    },
+    {
+      "nome": "junin",
+      "email": "eli@gmail.com",
+      "cpf": "10325225252",
+      "objetivo": "saude_bem_estar",
+      "sexo": "masculino",
+      "altura": 180,
+      "idade": 18,
+      "celular": "8888888888",
+      "senha": "1234",
+      "id": "7"
+>>>>>>> ce89388 (Alterações finais no readme)
     }
     
   ],
@@ -90,6 +129,7 @@
       "id": "3"
     },
     {
+<<<<<<< HEAD
       "nome": "Luiz",
       "email": "luiz@gmail.com",
       "cpf": "020.647.116-53",
@@ -97,6 +137,24 @@
       "celular": "(31) 99999-9999",
       "senha": "luiz",
       "id": "4"
+=======
+      "nome": "João Batista",
+      "email": "joao@nutri.com",
+      "cpf": "12312312355",
+      "crn": "12452",
+      "celular": "9899999999",
+      "senha": "1234",
+      "id": "4"
+    },
+    {
+      "nome": "Felipe",
+      "email": "felipenutri@gmail.com",
+      "cpf": "10110110152",
+      "crn": "12452",
+      "celular": "9899999999",
+      "senha": "fenutri",
+      "id": "5"
+>>>>>>> ce89388 (Alterações finais no readme)
     }
   ],
   "evolucao": [
@@ -141,8 +199,38 @@
       "peso": 80
     },
     {
+<<<<<<< HEAD
       "id": 1750543734843,
       "data": "2025-06-12",
+=======
+      "id": 1750724418840,
+      "data": "2025-06-25",
+      "peso": 50
+    },
+    {
+      "id": 1751168106140,
+      "data": "2025-06-29",
+      "peso": 150
+    },
+    {
+      "id": 1751168259784,
+      "data": "2025-06-30",
+      "peso": 30
+    },
+    {
+      "id": 1751168805130,
+      "data": "2025-07-23",
+      "peso": 90
+    },
+    {
+      "id": 1751225300826,
+      "data": "2025-05-22",
+      "peso": 20
+    },
+    {
+      "id": 1751226340802,
+      "data": "2025-06-10",
+>>>>>>> ce89388 (Alterações finais no readme)
       "peso": 100
     }
   ],
