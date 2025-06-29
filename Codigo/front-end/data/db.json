@@ -29,19 +29,8 @@
       "celular": "31983137875",
       "senha": "2l",
       "id": "5"
-    },
-    {
-      "nome": "Felipe Paz Carvalho Batista",
-      "email": "lipepaz23@gmail.com",
-      "cpf": "020.647.116-51",
-      "objetivo": "ganhar_massa",
-      "sexo": "masculino",
-      "altura": 174,
-      "idade": 18,
-      "celular": "31983137875",
-      "senha": "Felipe",
-      "id": "5"
     }
+    
   ],
   "nutricionistas": [
     {
@@ -99,6 +88,15 @@
       "celular": "31983137874",
       "senha": "eli",
       "id": "3"
+    },
+    {
+      "nome": "Luiz",
+      "email": "luiz@gmail.com",
+      "cpf": "020.647.116-53",
+      "crn": "12348",
+      "celular": "(31) 99999-9999",
+      "senha": "luiz",
+      "id": "4"
     }
   ],
   "evolucao": [
@@ -141,6 +139,11 @@
       "id": 1750534819284,
       "data": "2025-06-22",
       "peso": 80
+    },
+    {
+      "id": 1750543734843,
+      "data": "2025-06-12",
+      "peso": 100
     }
   ],
   "registros": [
@@ -221,6 +224,19 @@
       "tmbComAtividade": 3294,
       "data": "2025-06-21T20:47:22.046Z",
       "id": 6
+    },
+    {
+      "altura": 174,
+      "peso": 80,
+      "idade": 18,
+      "genero": "Masculino",
+      "fatorAtividade": 1.725,
+      "imc": 26.4,
+      "status": "Sobrepeso",
+      "tmb": 1910,
+      "tmbComAtividade": 3294,
+      "data": "2025-06-21T22:09:08.440Z",
+      "id": 7
     }
   ],
   "alimentos": [
