@@ -27,7 +27,7 @@ Desenvolver um site de auxílio nutricional que ofereça informações confiáve
 
 1. Navegue até o diretório do projeto:
     bash
-    cd pmg-es-2025-1-ti1-2401200-auxilio-nutricional.git
+    cd pmg-es-2025-1-ti1-2401200-auxilio-nutricional
 2. No terminal, execute:
     - npm install express
     - npm start
