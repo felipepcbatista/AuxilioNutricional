@@ -1,9 +1,10 @@
 # NutriTech
 
-Desenvolver um site de auxílio nutricional que ofereça informações confiáveis sobre alimentação saudável, disponibilize ferramentas para o acompanhamento da dieta, como calculadoras nutricionais e sugestões de cardápios personalizados, promova a educação nutricional por meio de artigos, vídeos e dicas práticas, incentive a adoção de hábitos alimentares saudáveis de forma contínua e sustentável.
+## Descrição
 
+NutriTech é um site de auxílio nutricional que oferece ferramentas para acompanhamento da dieta, incluindo calculadoras nutricionais, diário alimentar para registro do consumo diário e receitas saudáveis. Além disso, promove conhecimento nutricional por meio de dados e gráficos e disponibiliza funcionalidades exclusivas para nutricionistas parceiros, como agenda organizada, acompanhamento de pacientes e gestão de consultas online. O objetivo é incentivar a adoção de hábitos alimentares saudáveis de forma contínua e sustentável.
 
-## Alunos integrantes da equipe
+## Equipe
 
 * Felipe Paz Carvalho Batista
 * Luiz Fernando Penholate Alves Durães
@@ -17,21 +18,67 @@ Desenvolver um site de auxílio nutricional que ofereça informações confiáve
 * Danilo de Quadros Maia Filho
 * Daniel Machado Osório Pereira
 
-## Instruções de utilização
+## Tecnologias Utilizadas
 
-### Requisitos para rodar o site
+* Node.js 
+* Express.js
+* HTML5 / CSS3 / JavaScript
+* JSON 
+* Visual Studio Code
+
+## Ferramentas e Colaboração
+
+* Git - Controle de versão
+* GitHub - Hospedagem do repositório
+* Miro - Desenvolvimento design thinking
+* Figma - Design e prototipagem de interfaces
+
+## Funcionalidades Principais
+
+* Diário alimentar para registro diário de consumo
+* Receitas saudáveis para auxiliar na dieta
+* Painel gráfico com análise nutricional
+* Ferramentas para nutricionistas: agenda, acompanhamento de pacientes, gestão de consultas online e calculadoras nutricionais
+
+## Como executar o projeto
+
+### Pré-requisitos
 
 - [Node.js](https://nodejs.org) instalado na máquina
 
-### Passos para rodar o site
+### Passos para rodar o site localmente
 
-1. Navegue até o diretório do projeto:
-    bash
+1. Clone ou navegue até o diretório do projeto:
+    ```bash
     cd pmg-es-2025-1-ti1-2401200-auxilio-nutricional
-2. No terminal, execute:
-    - npm install express
-    - npm start
-
-3. Por fim, no navegador:
+    ```
+2. Instale as dependências:
+    ```bash
+    npm install
+    ```
+3. Inicie o servidor:
+    ```bash
+    npm start
+    ```
+4. No navegador, acesse: 
     - http://localhost:3001
 
+## Estrutura do Projeto
+
+| Pasta              | Conteúdo                                                                 |
+|--------------------|--------------------------------------------------------------------------|
+| `.vscode/`         | Configurações do VS Code específicas do projeto                          |
+| `Artefatos/`       | Documentos de apoio e artefatos do projeto                               |
+| `Codigo/`          | Código-fonte (separado em frontend e backend)                            |
+| `Divulgacao/`      | Materiais de divulgação, apresentações e vídeos                          |
+| `Documentacao/`    | Documentação oficial, atas e relatórios                                  |
+| `node_modules/`    | Dependências instaladas automaticamente via `npm`                        |
+
+
+## Contato
+
+[felipepaz.cb@gmail.com](mailto:felipepaz.cb@gmail.com)
+
+## Licença 
+
+Este projeto está licenciado sob a [MIT License](./LICENSE).
