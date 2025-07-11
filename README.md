@@ -1,5 +1,13 @@
 # NutriTech
 
+## Sobre este repositório
+
+Este repositório é um fork do projeto original desenvolvido pela organização [ICEI-PUC-Minas-PMGES-TI](https://github.com/ICEI-PUC-Minas-PMGES-TI).
+
+Participei deste projeto como colaborador durante o desenvolvimento do Trabalho Interdisciplinas de Aplicações Web, contribuindo com funcionalidades, documentação e organização do código.
+
+Repositório original: [pmg-es-2025-1-ti1-2401200-auxilio-nutricional](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2401200-auxilio-nutricional)
+
 ## Descrição
 
 NutriTech é um site de auxílio nutricional que oferece ferramentas para acompanhamento da dieta, incluindo calculadoras nutricionais, diário alimentar para registro do consumo diário e receitas saudáveis. Além disso, promove conhecimento nutricional por meio de dados e gráficos e disponibiliza funcionalidades exclusivas para nutricionistas parceiros, como agenda organizada, acompanhamento de pacientes e gestão de consultas online. O objetivo é incentivar a adoção de hábitos alimentares saudáveis de forma contínua e sustentável.
