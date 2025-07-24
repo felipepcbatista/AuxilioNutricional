@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3001/usuarios', {
+            const response = await fetch('https://auxilionutricional.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

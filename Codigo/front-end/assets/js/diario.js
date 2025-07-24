@@ -264,7 +264,7 @@ function atualizarTotais() {
         const urlParams = new URLSearchParams(window.location.search);
         const foodId = urlParams.get('id');
 
-        fetch('/api/alimentos')
+        fetch('https://auxilionutricional.onrender.com')
             .then(res => res.json())
             .then(data => {
                 alimentos = data;

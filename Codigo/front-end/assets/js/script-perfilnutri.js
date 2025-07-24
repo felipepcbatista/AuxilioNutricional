@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const horaFimInput = document.getElementById('horaFim');
     const saveNewHorarioBtn = document.getElementById('saveNewHorario');
 
-    const API_URL = 'http://localhost:3001/nutricionistas/1'; 
+    const API_URL = 'https://auxilionutricional.onrender.com'; 
     let currentNutricionistaData = {};
 
     async function loadNutricionistaData() {
@@ -235,7 +235,7 @@ async function excluirConta() {
   try {
     const id = currentNutricionistaData.id;
 
-    const resposta = await fetch(`http://localhost:3001/nutricionistas/${id}`, {
+    const resposta = await fetch(`https://auxilionutricional-backend.onrender.com/nutricionistas/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"

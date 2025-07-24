@@ -1,7 +1,5 @@
-const API_URL = "http://localhost:3001/api/evolucao";
-
 async function buscarDados() {
-  const resposta = await fetch(API_URL);
+  const resposta = await fetch("https://auxilionutricional.onrender.com");
   const dados = await resposta.json();
   return dados.sort((a, b) => a.data.localeCompare(b.data));
 }
@@ -100,7 +98,7 @@ document.getElementById("form").addEventListener("submit", async (e) => {
     return;
   }
 
-  await fetch(API_URL, {
+  await fetch("https://auxilionutricional.onrender.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ data, peso })
