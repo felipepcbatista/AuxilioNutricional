@@ -10,7 +10,7 @@ app.use('/assets', express.static(path.join(__dirname, '../front-end/assets')));
 app.use(express.json());
 
 // ------------------------- ROTAS HTML ------------------------- //
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'escolha-cadastro.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'index.html')));
 app.get('/cadastro-nutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'cadastro-nutri.html')));
 app.get('/cadastro-usu', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'cadastro-usu.html')));
 app.get('/login', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'login.html')));
