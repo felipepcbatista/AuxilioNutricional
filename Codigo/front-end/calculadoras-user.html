@@ -2,120 +2,129 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calculadoras Nutricionais</title>
   <link rel="stylesheet" href="assets/css/gerais_diario.css">  
   <link rel="stylesheet" href="assets/css/calculadoras.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/responsivo.css">
 </head>
+
 <body>
   <div class="container">
     <header class="app-header">
       <h1>Calculadoras</h1>
       <button class="menu-toggle" aria-label="Abrir menu">
-            <i class="fa fa-bars"></i>
-        </button>
+        <i class="fa fa-bars"></i>
+      </button>
       <nav>
-            <ul class="nav-links">
-                <li><a href="/diario_alimentar.html">Diário</a></li>
-                <li><a href="/informacoes.html">Informações Nutricionais</a></li>
-                <li><a href="/receitas.html">Receitas</a></li>
-                <li><a href="/marcar_consulta.html">Agendar Consulta</a></li>
-                <li><a href="/evolucao_usuario.html">Minha Evolução</a></li>
-                <li><a href="/calculadoras-user.html" class="active">Calculadoras</a></li>
-                <li><a href="/user_profile.html"><i class="fa-solid fa-user"></i></a></li>
-            </ul>
-        </nav>
+        <ul class="nav-links">
+          <li><a href="/diario_alimentar.html">Diário</a></li>
+          <li><a href="/informacoes.html">Informações Nutricionais</a></li>
+          <li><a href="/receitas.html">Receitas</a></li>
+          <li><a href="/marcar_consulta.html">Agendar Consulta</a></li>
+          <li><a href="/evolucao_usuario.html">Minha Evolução</a></li>
+          <li><a href="/calculadoras-user.html" class="active">Calculadoras</a></li>
+          <li><a href="/user_profile.html"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="main">
-    <h2>Calculadora de IMC / TMB</h2>
-    <p>
-      Calcule seu índice de massa corporal (IMC), sua taxa metabólica basal (TMB) e o gasto calórico com base no seu nível de atividade física.
-    </p>
+    <main class="main">
+      <h2>Calculadora de IMC / TMB</h2>
+      <p>Calcule seu índice de massa corporal (IMC), sua taxa metabólica basal (TMB) e o gasto calórico com base no seu nível de atividade física.</p>
 
-    <form id="formulario">
-      <label for="altura">Altura (cm):</label>
-      <input type="number" id="altura" required />
+      <form id="formulario" aria-label="Formulário de cálculo de IMC e TMB">
+        <fieldset>
+          <legend>Seus dados</legend>
 
-      <label for="peso">Peso (kg):</label>
-      <input type="number" id="peso" required />
+          <label for="altura"> Altura (cm):</label>
+          <input type="number" id="altura" placeholder="Ex: 170" required aria-required="true"/>
 
-      <label for="idade">Idade:</label>
-      <input type="number" id="idade" required />
+          <label for="peso"> Peso (kg):</label>
+          <input type="number" id="peso" placeholder="Ex: 65" required aria-required="true"/>
 
-      <label for="genero">Gênero:</label>
-      <select id="genero" required>
-        <option value="Feminino">Feminino</option>
-        <option value="Masculino">Masculino</option>
-      </select>
+          <label for="idade"> Idade:</label>
+          <input type="number" id="idade" placeholder="Ex: 30" required aria-required="true"/>
 
-      <label for="atividade">Nível de atividade física:</label>
-      <select id="atividade" required>
-        <option value="1.2">Sedentário</option>
-        <option value="1.375">Exercícios leves (1–3x/semana)</option>
-        <option value="1.55">Exercícios moderados (3–5x/semana)</option>
-        <option value="1.725">Exercícios intensos (6–7x/semana)</option>
-        <option value="1.9">Exercício muito intenso / trabalho físico</option>
-      </select>
+          <label for="genero"> Gênero:</label>
+          <select id="genero" required aria-required="true">
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+          </select>
 
-      <button type="submit">Calcular</button>
-    </form>
+          <label for="atividade"> Nível de atividade física:</label>
+          <select id="atividade" required aria-required="true">
+            <option value="1.2">Sedentário</option>
+            <option value="1.375">Exercícios leves (1–3x/semana)</option>
+            <option value="1.55">Exercícios moderados (3–5x/semana)</option>
+            <option value="1.725">Exercícios intensos (6–7x/semana)</option>
+            <option value="1.9">Exercício muito intenso / trabalho físico</option>
+          </select>
 
-    <div id="resultado" class="alert" style="display: none;"></div>
+          <button type="submit"><i class="fas fa-calculator"></i> Calcular</button>
+        </fieldset>
+      </form>
 
-    <div class="tabela-imc">
-      <h2>Classificação do IMC</h2>
-      <table>
-        <tr><th>IMC</th><th>Classificação</th></tr>
-        <tr><td>Abaixo de 18,5</td><td>Abaixo do peso</td></tr>
-        <tr><td>18,5 – 24,9</td><td>Saudável</td></tr>
-        <tr><td>25,0 – 29,9</td><td>Sobrepeso</td></tr>
-        <tr><td>30,0 ou mais</td><td>Obesidade</td></tr>
-      </table>
-    </div>
-  </div>
+      <div id="resultado" class="alert" style="display: none;" aria-live="polite"></div>
+
+      <section class="tabela-imc" aria-labelledby="titulo-imc">
+        <h2 id="titulo-imc">Classificação do IMC</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">IMC</th>
+              <th scope="col">Classificação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Abaixo de 18,5</td><td>Abaixo do peso</td></tr>
+            <tr><td>18,5 – 24,9</td><td>Saudável</td></tr>
+            <tr><td>25,0 – 29,9</td><td>Sobrepeso</td></tr>
+            <tr><td>30,0 ou mais</td><td>Obesidade</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
   </div>
 
   <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <img src="assets/images/logo-NutriTech.png" alt="Logo">
-    </div>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="assets/images/logo-NutriTech.png" alt="Logo da NutriTech">
+      </div>
 
+      <div class="footer-links">
+        <h3>Sobre</h3>
+        <ul>
+          <li><a href="#">Informações</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-links">
-      <h3>Sobre</h3>
-      <ul>
-        <li><a href="#">Informações</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </div>
+      <div class="footer-links">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Telefone</a></li>
+          <li><a href="#">Chat</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-links">
-      <h3>Suporte</h3>
-      <ul>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Telefone</a></li>
-        <li><a href="#">Chat</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-social">
-      <div class="icons">
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="footer-social">
+        <div class="icons">
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NutriTech - Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
   <script src="assets/js/calculadoras.js"></script>
   <script src="assets/js/app.js"></script>

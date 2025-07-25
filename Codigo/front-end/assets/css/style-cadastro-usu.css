@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    color: #333;
+    color: #2C2C2C;
 }
 
 .cadastro-container {
@@ -26,24 +26,25 @@ body {
 }
 
 .cadastro-box {
-    background-color: #F2F3F7;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #F9FAFB;
+    padding: 36px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     text-align: center;
 }
 
 .logo {
-    max-width: 120px;
-    margin-bottom: 25px;
+    max-width: 100px;
+    margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.8em;
-    margin-bottom: 30px;
-    color:#051D40;
+    font-size: 1.75em;
+    margin-bottom: 25px;
+    color: #051D40;
+    font-weight: 700;
 }
 
 .input-group {
@@ -53,85 +54,88 @@ h2 {
 
 .input-group label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333333;
 }
 
-.input-group input[type="text"],
-.input-group input[type="email"],
-.input-group input[type="number"],
-.input-group input[type="cel"],
-.input-group input[type="password"] { 
+.input-group input,
+.input-group select {
     width: 100%;
-    padding: 14px 15px;
-    border: 1px solid #ddd;
+    padding: 13px 15px;
+    border: 1px solid #CCCCCC;
     border-radius: 8px;
     font-size: 1em;
-    color: #333;
+    color: #2C2C2C;
+    background-color: #FFFFFF;
+    transition: border-color 0.2s ease;
 }
-.input-group select { 
-    width: 100%;
-    padding: 14px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-    color: #333;
-    appearance: none; 
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #2E7D32;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.input-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down' viewBox='0 0 24 24'><polyline points='6 9 12 15 18 9'/></svg>");
     background-repeat: no-repeat;
     background-position: right 15px center;
-    background-size: 18px;
+    background-size: 16px;
+    background-color: #fff;
 }
 
 .btn {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
     border: none;
     border-radius: 8px;
-    font-size: 1.1em;
+    font-size: 1.05em;
     cursor: pointer;
-    margin-bottom: 15px;
+    font-weight: 500;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .btn.primary {
-    background-color: #008000;
+    background-color: #2E7D32;
     color: white;
 }
 
 .btn.primary:hover {
-    background-color: #006400;
+    background-color: #27642B;
+    transform: scale(1.02);
+    filter: brightness(1.05);
 }
 
 .login-link {
-    margin-top: 25px;
-    font-size: 0.9em;
-    color: #333;
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #666666;
 }
 
 .login-link a {
-    color: #9F2B00;
+    color: #2E7D32;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.2s ease;
 }
 
 .login-link a:hover {
-    color: #8B2400;
+    color: #1B5E20;
     text-decoration: underline;
 }
 
-@media (max-width: 550px) { 
+@media (max-width: 550px) {
     .cadastro-box {
-        margin: 0;
-        padding: 25px; 
-        max-height: calc(100vh - 40px); 
+        padding: 28px;
+        max-height: calc(100vh - 40px);
     }
 
     h2 {
-        font-size: 1.6em;
-        margin-bottom: 25px;
+        font-size: 1.5em;
+        margin-bottom: 20px;
     }
 
     .input-group {
@@ -149,6 +153,6 @@ h2 {
     }
 
     .logo {
-        max-width: 90px;
+        max-width: 80px;
     }
 }

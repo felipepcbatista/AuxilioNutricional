@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ body {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    color: #333333;
+    color: #2C2C2C;
 }
 
 .choice-container {
@@ -26,10 +26,10 @@ body {
 }
 
 .choice-box {
-    background-color: #F2F3F7;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #F9FAFB;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     width: 100%;
     max-width: 450px;
     text-align: center;
@@ -37,11 +37,11 @@ body {
 }
 
 .choice-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .logo {
-    max-width: 120px;
+    max-width: 100px;
     margin-bottom: 25px;
 }
 
@@ -49,13 +49,15 @@ h2 {
     font-size: 1.8em;
     margin-bottom: 15px;
     color: #051D40;
+    font-weight: 700;
 }
 
 .description {
     font-size: 1em;
-    color: #333333;
+    color: #666666;
     margin-bottom: 30px;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 .btn {
@@ -64,12 +66,13 @@ h2 {
     padding: 15px;
     border: none;
     border-radius: 8px;
-    font-size: 1.1em;
+    font-size: 1.05em;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
     text-decoration: none;
     color: white;
     text-align: center;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 
@@ -78,38 +81,40 @@ h2 {
 }
 
 .btn.primary-choice {
-    background-color: #008000;
+    background-color: #2E7D32;
 }
 
 .btn.primary-choice:hover {
-    background-color: #006400;
-    transform: translateY(-2px);
+    background-color: #27642B;
+    transform: scale(1.02);
+    filter: brightness(1.05);
 }
 
 .btn.secondary-choice {
-    background-color: #5E17EB;
+    background-color: #7E57C2;
 }
 
 .btn.secondary-choice:hover {
-    background-color: #4a13c0;
-    transform: translateY(-2px);
+    background-color: #6749A7;
+    transform: scale(1.02);
+    filter: brightness(1.05);
 }
 
 .login-link {
-    margin-top: 30px;
-    font-size: 0.9em;
-    color: #333333;
+    margin-top: 25px;
+    font-size: 0.85em;
+    color: #666666;
 }
 
 .login-link a {
-    color: #9F2B00;
+    color: #2E7D32;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     transition: color 0.2s ease;
 }
 
 .login-link a:hover {
-    color: #8B2400;
+    color: #1B5E20;
     text-decoration: underline;
 }
 
@@ -117,27 +122,31 @@ h2 {
     body {
         padding: 15px;
     }
+
     .choice-box {
-        padding: 30px;
+        padding: 28px;
     }
 
     .logo {
-        max-width: 100px;
+        max-width: 80px;
     }
 
     h2 {
         font-size: 1.5em;
         margin-bottom: 10px;
     }
+
     .description {
-        font-size: 0.9em;
+        font-size: 0.95em;
         margin-bottom: 25px;
     }
+
     .btn {
         padding: 12px;
         font-size: 1em;
     }
+
     .login-link {
-        margin-top: 25px;
+        margin-top: 20px;
     }
 }

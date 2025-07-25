@@ -116,16 +116,9 @@ const perfis = [
     lista.innerHTML = "";
     feedbacks.forEach((fb, index) => {
       const p = document.createElement("p");
-      p.innerHTML = `<strong>${fb.nome}:</strong> “${fb.texto}” 
-        <span onclick="removerFeedback(${index})" style="color: red; cursor: pointer; font-weight: bold; margin-left: 10px;">×</span>`;
+      p.innerHTML = `<strong>${fb.nome}:</strong> “${fb.texto}” `
       lista.appendChild(p);
     });
-  }
-  
-  function removerFeedback(index) {
-    feedbacks.splice(index, 1);
-    salvarFeedbacks();
-    renderizarFeedbacks();
   }
   
   function adicionarFeedback() {
