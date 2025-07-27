@@ -1,87 +1,111 @@
-main{
-    display: flex;
-    justify-content: center;
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
-.user{
-    display: flex;
-    flex-grow: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 5rem;
-    gap: 30rem;
-    background-color: var(--fundo-principal);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2rem;   
-}
-.user-icon{
-    font-size: 10rem;
-    background-color: rgba(214, 214, 214, 0.432);
-    padding: 3rem;
-    border-radius: 50%;
-}
-.user ul{
-    list-style: none;
-}
-.user h2{
-    text-align: center;
-    margin-top: 0.5rem;
-    background-color: rgba(214, 214, 214, 0.568);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
-}
-.user-list {
-    text-align: center;
-    border-right: 2px solid gray;
-    padding-right: 10rem;
-}
-.user-list li{
-    padding-top: 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-.info-list{
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1rem;
-    
-}
-.info-list h3{
-    font-size: 2.5rem;
-    color: var(--detalhes2);
 
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4rem;
+  background-color: var(--fundo-principal);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1100px;
 }
-    .edit-icon {
-      cursor: pointer;
-      margin-left: 8px;
-      color: var(--detalhes3);
-      font-size: 1rem;
-    }
 
-    .save-icon {
-      cursor: pointer;
-      margin-left: 8px;
-      color: #008000;
-    }
+.user-icon {
+  font-size: 8rem;
+  background-color: rgba(214, 214, 214, 0.432);
+  padding: 2rem;
+  border-radius: 50%;
+  color: #444;
+}
 
-    .info-item {
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
+.user ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    input.edit-field {
-      margin-left: 8px;
-      padding: 4px;
-    }
-
-    .account-actions {
+.user h2 {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 0.5rem;
+  background-color: rgba(214, 214, 214, 0.568);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26);
 }
 
-.logout-button, .delete-button {
-  margin: 10px;
+.user-list {
+  text-align: center;
+  border-right: 2px solid gray;
+  padding-right: 4rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.user-list li {
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.info-list {
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 280px;
+  gap: 1rem;
+}
+
+.info-list h3 {
+  font-size: 2rem;
+  color: var(--detalhes2);
+  margin-bottom: 1rem;
+}
+
+.info-item {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: var(--detalhes3);
+  font-size: 1rem;
+}
+
+.save-icon {
+  cursor: pointer;
+  color: #008000;
+}
+
+input.edit-field,
+select.edit-field {
+  padding: 5px 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.account-actions {
+  text-align: left;
+  margin-top: 30px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logout-button,
+.delete-button {
   padding: 10px 20px;
   border: none;
   border-radius: 8px;

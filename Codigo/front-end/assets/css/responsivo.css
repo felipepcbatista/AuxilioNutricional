@@ -367,6 +367,52 @@
     flex-direction: column;
     gap: 15px;
   }
+
+  .food-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.food-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.food-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
+}
+
+.food-name {
+  flex: 1;
+  white-space: normal; /* Permite quebrar em múltiplas linhas */
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.add-icon {
+  flex-shrink: 0;
+  margin-left: 12px;
+  font-size: 1.2rem;
+  color: purple;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -546,27 +592,6 @@
     padding: 15px;
   }
 
-  .user-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .user-icon {
-    font-size: 4rem;
-  }
-
-  .info-list {
-    margin-top: 20px;
-    width: 100%;
-  }
-
-  .info-list ul {
-    padding-left: 0;
-    list-style-position: inside;
-  }
-
   footer .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -584,6 +609,27 @@
     margin-top: 10px;
   }
 }
+/* Responsivo */
+@media (max-width: 768px) {
+  .user {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .user-list {
+    border-right: none;
+    border-bottom: 2px solid gray;
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+  .account-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 
 @media (max-width: 480px) {
   body {

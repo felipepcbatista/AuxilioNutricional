@@ -32,67 +32,74 @@
   </div>
 
   <main>
-    <div class="user">
-      <ul class="user-list">
-        <li><i class="fa-solid fa-user user-icon"></i></li>
+  <section class="profile-container">
+    <div class="user-box">
+      <div class="user-icon-box">
+        <i class="fa-solid fa-user user-icon"></i>
+      </div>
+      <div class="user-names">
+        <div class="info-item">
+          <span id="nickname-display" class="info-main"></span>
+          <input type="text" id="nickname-input" class="edit-field" style="display:none;">
+          <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('nickname')"></i>
+          <i class="fa-solid fa-check save-icon" onclick="salvarCampo('nickname')" style="display:none;"></i>
+        </div>
+        <div class="info-item">
+          <span id="nomeCompleto-display" class="info-sub"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-list">
+      <h3>Informações</h3>
+      <ul>
+        <li class="info-item">
+          <strong>Peso (kg):</strong>
+          <span id="peso-display" class="value-display"></span>
+          <input type="number" id="peso-input" class="edit-field" min="0" style="display:none;">
+          <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('peso')"></i>
+          <i class="fa-solid fa-check save-icon" onclick="salvarCampo('peso')" style="display:none;"></i>
+        </li>
 
         <li class="info-item">
-  <span id="nickname-display" style="font-weight: bold; font-size: 1.2em;"></span>
-  <input type="text" id="nickname-input" class="edit-field" style="display:none;">
-  <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('nickname')"></i>
-  <i class="fa-solid fa-check save-icon" onclick="salvarCampo('nickname')" style="display:none;"></i>
-</li>
+          <strong>Altura (cm):</strong>
+          <span id="altura-display" class="value-display"></span>
+          <input type="number" id="altura-input" class="edit-field" min="0" style="display:none;">
+          <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('altura')"></i>
+          <i class="fa-solid fa-check save-icon" onclick="salvarCampo('altura')" style="display:none;"></i>
+        </li>
 
-<li class="info-item">
-  <span id="nomeCompleto-display" style="font-size: 0.9em;"></span>
-</li>
+        <li class="info-item">
+          <strong>Objetivo:</strong>
+          <span id="objetivo-display" class="value-display"></span>
+          <select id="objetivo-input" class="edit-field" style="display:none;">
+            <option value="">Selecione...</option>
+            <option value="Perder peso">Perder peso</option>
+            <option value="Ganhar massa muscular">Ganhar massa muscular</option>
+            <option value="Manter peso">Manter peso</option>
+            <option value="Melhorar saúde geral">Melhorar saúde geral</option>
+          </select>
+          <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('objetivo')"></i>
+          <i class="fa-solid fa-check save-icon" onclick="salvarCampo('objetivo')" style="display:none;"></i>
+        </li>
+
+        <li class="info-item">
+          <strong>Idade:</strong>
+          <span id="idade-display" class="value-display"></span>
+          <input type="number" id="idade-input" class="edit-field" min="0" style="display:none;">
+          <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('idade')"></i>
+          <i class="fa-solid fa-check save-icon" onclick="salvarCampo('idade')" style="display:none;"></i>
+        </li>
       </ul>
 
-
-      <div class="info-list">
-        <h3>Informações</h3>
-        <ul>
-          <li class="info-item"><strong>Peso (kg):</strong>
-            <span id="peso-display"></span>
-            <input type="number" id="peso-input" class="edit-field" min="0" style="display:none;">
-            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('peso')"></i>
-            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('peso')" style="display:none;"></i>
-            </li>
-
-            <li class="info-item"><strong>Altura (cm):</strong>
-            <span id="altura-display"></span>
-            <input type="number" id="altura-input" class="edit-field" min="0" style="display:none;">
-            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('altura')"></i>
-            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('altura')" style="display:none;"></i>
-            </li>
-
-            <li class="info-item"><strong>Objetivo:</strong>
-            <span id="objetivo-display"></span>
-            <select id="objetivo-input" class="edit-field" style="display:none;">
-                <option value="">Selecione...</option>
-                <option value="Perder peso">Perder peso</option>
-                <option value="Ganhar massa muscular">Ganhar massa muscular</option>
-                <option value="Manter peso">Manter peso</option>
-                <option value="Melhorar saúde geral">Melhorar saúde geral</option>
-            </select>
-            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('objetivo')"></i>
-            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('objetivo')" style="display:none;"></i>
-            </li>
-
-            <li class="info-item"><strong>Idade:</strong>
-            <span id="idade-display"></span>
-            <input type="number" id="idade-input" class="edit-field" min="0" style="display:none;">
-            <i class="fa-solid fa-pen edit-icon" onclick="editarCampo('idade')"></i>
-            <i class="fa-solid fa-check save-icon" onclick="salvarCampo('idade')" style="display:none;"></i>
-            </li>
-        </ul>
-              <div class="account-actions">
+      <div class="account-actions">
         <button class="logout-button" onclick="logout()">Sair da Conta</button>
         <button class="delete-button" onclick="excluirConta()">Excluir Conta</button>
       </div>
-      </div>
     </div>
-  </main>
+  </section>
+</main>
+
 
   <footer class="footer">
     <div class="footer-container">
@@ -132,97 +139,7 @@
     </div>
   </footer>
 <script src="assets/js/app.js"></script>
-  <script>
-  function carregarDados() {
-    const campos = ["nickname", "peso", "altura", "objetivo", "idade"];
-    campos.forEach((campo) => {
-      const valor = localStorage.getItem(campo);
-      const displayEl = document.getElementById(`${campo}-display`);
-      const inputEl = document.getElementById(`${campo}-input`);
-
-      if (valor !== null) {
-        displayEl.textContent = valor;
-        inputEl.value = valor;
-      } else {
-        displayEl.textContent = "-";
-        inputEl.value = "";
-      }
-    });
-  }
-
-  function editarCampo(campo) {
-    document.getElementById(`${campo}-display`).style.display = "none";
-    document.getElementById(`${campo}-input`).style.display = "inline-block";
-    document.querySelector(`#${campo}-input + .edit-icon`).style.display = "none";
-    document.querySelector(`#${campo}-input + .edit-icon + .save-icon`).style.display = "inline-block";
-  }
-
-  function salvarCampo(campo) {
-    const inputEl = document.getElementById(`${campo}-input`);
-    let valor = inputEl.tagName === "SELECT" ? inputEl.value : inputEl.value.trim();
-
-    // Validação para campos numéricos
-    if (["peso", "altura", "idade"].includes(campo)) {
-      const num = parseFloat(valor);
-      if (isNaN(num) || num < 0) {
-        alert("Insira um valor válido (maior ou igual a 0).");
-        return;
-      }
-    }
-
-    // Se vazio, salva "-"
-    if (valor === "") valor = "-";
-
-    localStorage.setItem(campo, valor);
-
-    document.getElementById(`${campo}-display`).textContent = valor;
-    inputEl.style.display = "none";
-    document.getElementById(`${campo}-display`).style.display = "inline";
-
-    const editIcon = inputEl.nextElementSibling;
-    const saveIcon = editIcon.nextElementSibling;
-    editIcon.style.display = "inline-block";
-    saveIcon.style.display = "none";
-  }
-
-  function logout() {
-    if (confirm("Deseja sair da conta?")) {
-      window.location.href = "/";
-    }
-  }
-
-  async function excluirConta() {
-    const user = JSON.parse(localStorage.getItem("loggedInUser"));
-    const id = user?.id;
-
-    if (!id) {
-      alert("Erro: ID do usuário não encontrado.");
-      return;
-    }
-
-    const confirmacao = confirm("Tem certeza que deseja excluir sua conta? Essa ação é irreversível.");
-
-    if (!confirmacao) return;
-
-    try {
-      const response = await fetch(`http://localhost:3001/usuarios/${id}`, {
-        method: "DELETE"
-      });
-
-      if (!response.ok) throw new Error("Erro ao excluir conta.");
-
-      alert("Conta excluída com sucesso.");
-      localStorage.clear();
-      sessionStorage.clear();
-      window.location.href = "/";
-    } catch (error) {
-      console.error(error);
-      alert("Erro ao excluir conta. Tente novamente.");
-    }
-  }
-  window.onload = carregarDados;
-</script>
-
-  <script src="assets/js/diario.js"></script>
+<script src="assets/js/diario.js"></script>
+<script src="assets/js/user_profile.js"></script>
 </body>
 </html>
