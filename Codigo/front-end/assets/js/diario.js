@@ -185,7 +185,7 @@ function atualizarTotais() {
         document.querySelectorAll('.food-btn').forEach(btn => {
             btn.addEventListener('click', function () {
                 const foodId = this.dataset.id;
-                window.location.href = `adicionar_alimentos?id=${foodId}&refeicao=${refeicaoSelecionada}`;
+                window.location.href = `adicionar_alimentos.html?id=${foodId}&refeicao=${refeicaoSelecionada}`;
             });
         });
     }
