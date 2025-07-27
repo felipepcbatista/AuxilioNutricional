@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 alert('Nutricionista cadastrado com sucesso!');
-                window.location.href = '/login';  // Redireciona para a página de login
+                window.location.href = '/login.html';  // Redireciona para a página de login
             } else {
                 const errorData = await response.json();
                 console.error('Erro ao cadastrar:', errorData);

@@ -185,7 +185,7 @@ function atualizarTotais() {
         document.querySelectorAll('.food-btn').forEach(btn => {
             btn.addEventListener('click', function () {
                 const foodId = this.dataset.id;
-                window.location.href = `adicionar_alimentos?id=${foodId}&refeicao=${refeicaoSelecionada}`;
+                window.location.href = `adicionar_alimentos?id=${foodId}&refeicao=${refeicaoSelecionada}.html`;
             });
         });
     }
@@ -236,13 +236,13 @@ function atualizarTotais() {
                 registros.push(novoRegistro);
                 localStorage.setItem('alimentosConsumidos', JSON.stringify(registros));
 
-                window.location.href = `diario_alimentar`;
+                window.location.href = `diario_alimentar.html`;
             }
         });
     }
     if (voltarBtn) {
         voltarBtn.addEventListener('click', function () {
-            window.location.href = `registrar_alimentos?refeicao=${refeicaoSelecionada}`;
+            window.location.href = `registrar_alimentos?refeicao=${refeicaoSelecionada}.html`;
         });
     }
 
@@ -260,7 +260,7 @@ function atualizarTotais() {
     }
 
     // ----------- Carregar Dados se for Tela de Adicionar Alimento ----------
-    if (window.location.pathname.includes('adicionar_alimentos')) {
+    if (window.location.pathname.includes('adicionar_alimentos.html')) {
         const urlParams = new URLSearchParams(window.location.search);
         const foodId = urlParams.get('id');
 
@@ -286,8 +286,8 @@ function atualizarTotais() {
     }
 
     // ----------- Carregar Lista se for Tela de Registrar Alimentos ----------
-    if (window.location.pathname.includes('registrar_alimentos')) {
-    fetch('/api/alimentos')
+    if (window.location.pathname.includes('registrar_alimentos.html')) {
+    fetch('https://auxilionutricional.onrender.com')
         .then(res => res.json())
         .then(data => {
             alimentos = data;
@@ -301,7 +301,7 @@ function atualizarTotais() {
     }
 
 
-    if (window.location.pathname.includes('diario_alimentar')) {
+    if (window.location.pathname.includes('diario_alimentar.html')) {
         carregarDadosSalvos();
         
         window.addEventListener('pageshow', function(event) {

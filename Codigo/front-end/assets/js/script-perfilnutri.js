@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const result = await response.json();
             currentNutricionistaData = result;
             alert('Perfil atualizado com sucesso!');
-            window.location.href = '/dashboard_nutri';
+            window.location.href = '/dashboard_nutri.html';
         } catch (error) {
             console.error('Erro ao salvar o perfil:', error);
             alert('Não foi possível salvar as alterações. Tente novamente.');
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
      function logout() {
   if (confirm("Deseja sair da conta?")) {
-    window.location.href = "/";
+    window.location.href = "index.html";
   }
 }
 
@@ -245,7 +245,7 @@ async function excluirConta() {
     if (resposta.ok) {
       alert("Conta excluída com sucesso.");
       localStorage.clear();
-      window.location.href = "/";
+      window.location.href = "index.html";
     } else {
       alert("Erro ao excluir conta. Verifique se o servidor está rodando.");
     }
