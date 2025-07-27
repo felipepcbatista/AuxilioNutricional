@@ -15,30 +15,6 @@
   --sombra: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--fonte-principal);
-  background-color: var(--fundo-body);
-  padding: 30px 20px;
-  color: #333;
-}
-
-/* Bloco principal */
-.main {
-  background-color: var(--fundo-card);
-  border-radius: 16px;
-  padding: 30px 40px;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  box-shadow: var(--sombra);
-}
-
 /* Cabeçalho */
 h1 {
   color: var(--verde-principal);
