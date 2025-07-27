@@ -19,11 +19,14 @@ main {
 }
 
 .user-icon {
-  font-size: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
   background-color: rgba(214, 214, 214, 0.432);
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 50%;
-  color: #444;
+  margin: 0 auto;
 }
 
 .user ul {

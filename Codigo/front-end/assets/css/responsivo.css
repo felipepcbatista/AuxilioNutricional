@@ -609,7 +609,7 @@
     margin-top: 10px;
   }
 }
-/* Responsivo */
+
 @media (max-width: 768px) {
   .user {
     flex-direction: column;
