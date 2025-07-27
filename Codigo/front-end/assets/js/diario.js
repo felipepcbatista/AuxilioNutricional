@@ -185,7 +185,7 @@ function atualizarTotais() {
         document.querySelectorAll('.food-btn').forEach(btn => {
             btn.addEventListener('click', function () {
                 const foodId = this.dataset.id;
-                window.location.href = `adicionar_alimentos?id=${foodId}&refeicao=${refeicaoSelecionada}.html`;
+                window.location.href = `adicionar_alimentos?id=${foodId}&refeicao=${refeicaoSelecionada}`;
             });
         });
     }
@@ -242,7 +242,7 @@ function atualizarTotais() {
     }
     if (voltarBtn) {
         voltarBtn.addEventListener('click', function () {
-            window.location.href = `registrar_alimentos?refeicao=${refeicaoSelecionada}.html`;
+            window.location.href = `registrar_alimentos.html?refeicao=${refeicaoSelecionada}`;
         });
     }
 
