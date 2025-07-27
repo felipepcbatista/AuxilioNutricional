@@ -3,7 +3,10 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
+const cors = require('cors');
 const PORT = process.env.PORT || 3001;
+
+app.use(cors());
 
 // Middleware para arquivos estáticos
 app.use('/assets', express.static(path.join(__dirname, '../front-end/assets')));
