@@ -12,7 +12,7 @@
     <div class="container">
         <div class="dashboard-container">
             <header class="app-header">
-                <h1 id="welcome-message">Bem-vindo!</h1>
+                <h2>Bem-vindo(a), <span id="nomeNutri">Nutricionista</span>!</h2>
             </header>
 
                 <div class="card-grid">
@@ -91,10 +91,14 @@
 </footer>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const nutriName = localStorage.getItem('nutricionistaNome') || 'Nutricionista';
-        document.getElementById('welcome-message').textContent = `Bem-vindo, ${nutriName}!`;
-    });
+  document.addEventListener('DOMContentLoaded', () => {
+    const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    const nomeSpan = document.getElementById('nomeNutri');
+
+    if (user && user.nome && nomeSpan) {
+      nomeSpan.textContent = user.nome;
+    }
+  });
 </script>
 </body>
 </html>
