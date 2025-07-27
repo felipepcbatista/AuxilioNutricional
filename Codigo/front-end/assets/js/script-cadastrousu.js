@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+    console.log(document.getElementById('senha'));
     const form = document.getElementById('form');
+
+    if (!form) {
+  console.error('Formulário não encontrado!');
+  return;
+}
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();

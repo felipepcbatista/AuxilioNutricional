@@ -178,10 +178,10 @@ td button:hover{
     border: none;
     color: var(--detalhes2);
     transform: scale(1.1);
+    cursor: pointer;
 }
-td button a{
+td button{
     color: aliceblue;
-    text-decoration: none;
 }
 
 
