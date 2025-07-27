@@ -12,12 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
-        const cpf = document.getElementById('cpf').value;
         const objetivo = document.getElementById('objetivo').value;
         const sexo = document.getElementById('sexo').value;
         const altura = parseInt(document.getElementById('altura').value);
-        const idade = parseInt(document.getElementById('idade').value);
-        const celular = document.getElementById('celular').value;
         const senha = document.getElementById('senha').value;
         const confirmarSenha = document.getElementById('confirmarSenha').value;
 
@@ -30,12 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const novoUsuario = {
             nome,
             email,
-            cpf,
             objetivo,
             sexo,
             altura,
             idade,
-            celular,
             senha
         };
 
