@@ -2,27 +2,31 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-1.0">
-    <title>Escolha de Cadastro</title>
-    <link rel="stylesheet" href="assets/css/style-escolha-cadastro.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style-login.css">
 </head>
 <body>
-    <div class="choice-container">
-        <div class="choice-box">
-            <img src="assets/images/logoNutriTech.png" alt="Logo Auxílio Nutricional" class="logo">
-            <h2>Como você deseja se cadastrar?</h2>
-            <p class="description">Escolha o tipo de perfil que melhor se encaixa no seu uso da plataforma.</p>
-            
-            <a href="/cadastro-nutri.html" class="btn choice-btn primary-choice">
-                Cadastrar como Nutricionista
-            </a>
-            
-            <a href="/cadastro-usu.html" class="btn choice-btn secondary-choice">
-                Cadastrar como Usuário (Paciente)
-            </a>
-
-            <p class="login-link">Já tem uma conta? <a href="/login.html">Faça Login</a></p>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="assets/images/logoNutriTech.png" alt="LOGO" class="logo">
+            <h2>Bem-vindo(a)</h2>
+            <form id="loginForm" action="#" method="POST">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="senha" required>
+                </div>
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+                <button type="submit" class="btn primary">Entrar</button>
+                <a href="escolha_cadastro.html"> <button type="button" class="btn secondary">Cadastrar</button></a>
+            </form>
         </div>
+
     </div>
+    <script src="assets/js/script-login.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ app.use(express.json());
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'index.html')));
 app.get('/cadastro-nutri', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'cadastro-nutri.html')));
 app.get('/cadastro-usu', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'cadastro-usu.html')));
-app.get('/login', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'login.html')));
+app.get('/escolha_cadastro', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'escolha_cadastro.html')));
 app.get('/diario_alimentar', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'diario_alimentar.html')));
 app.get('/registrar_alimentos', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'registrar_alimentos.html')));
 app.get('/informacoes', (req, res) => res.sendFile(path.join(__dirname, '../front-end', 'informacoes.html')));

@@ -67,7 +67,7 @@ async function excluirConta() {
   if (!confirmacao) return;
 
   try {
-    const response = await fetch(`http://localhost:3001/usuarios/${id}`, {
+    const response = await fetch(`https://auxilionutricional.onrender.com/usuarios/${id}`, {
       method: "DELETE",
     });
 
