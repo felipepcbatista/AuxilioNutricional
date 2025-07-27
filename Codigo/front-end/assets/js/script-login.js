@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = passwordInput.value.trim();
 
         try {
-            const response = await fetch('https://auxilionutricional.onrender.com', {
+            const response = await fetch('https://auxilionutricional.onrender.com/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

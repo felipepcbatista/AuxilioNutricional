@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('https://auxilionutricional.onrender.com', {
+            const response = await fetch('https://auxilionutricional.onrender.com/nutricionistas', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

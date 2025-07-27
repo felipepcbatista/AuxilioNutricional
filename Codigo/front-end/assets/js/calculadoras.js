@@ -44,7 +44,7 @@ formulario.addEventListener("submit", async (e) => {
 
   try {
     // Envia o registro para o JSON Server
-    const response = await fetch("https://auxilionutricional.onrender.com", {
+    const response = await fetch("https://auxilionutricional.onrender.com/registros", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(registro),

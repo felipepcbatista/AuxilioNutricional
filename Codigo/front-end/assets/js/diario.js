@@ -264,7 +264,7 @@ function atualizarTotais() {
         const urlParams = new URLSearchParams(window.location.search);
         const foodId = urlParams.get('id');
 
-        fetch('https://auxilionutricional.onrender.com')
+        fetch('https://auxilionutricional.onrender.com/api/alimentos')
             .then(res => res.json())
             .then(data => {
                 alimentos = data;
@@ -287,7 +287,7 @@ function atualizarTotais() {
 
     // ----------- Carregar Lista se for Tela de Registrar Alimentos ----------
     if (window.location.pathname.includes('registrar_alimentos.html')) {
-    fetch('https://auxilionutricional.onrender.com')
+    fetch('https://auxilionutricional.onrender.com/api/alimentos')
         .then(res => res.json())
         .then(data => {
             alimentos = data;

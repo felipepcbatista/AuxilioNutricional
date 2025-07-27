@@ -16,18 +16,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentNutricionistaData = {};
 
     async function loadNutricionistaData() {
-        try {
-            const response = await fetch(API_URL);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            currentNutricionistaData = await response.json();
-            fillForm(currentNutricionistaData);
-        } catch (error) {
-            console.error('Erro ao carregar dados do nutricionista:', error);
-            alert('Não foi possível carregar os dados do perfil. Verifique se o JSON Server está rodando.');
+    try {
+        const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+        if (!loggedInUser || !loggedInUser.id) {
+            alert("Usuário não autenticado.");
+            return;
         }
+
+        const response = await fetch(`${API_URL}/nutricionistas/${loggedInUser.id}`);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+        currentNutricionistaData = await response.json();
+        fillForm(currentNutricionistaData);
+    } catch (error) {
+        console.error('Erro ao carregar dados do nutricionista:', error);
+        alert('Não foi possível carregar os dados do perfil.');
     }
+}
+
 
     function fillForm(data) {
         document.getElementById('nome').value = data.nome || '';
@@ -136,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function updateProfile(data) {
         try {
-            const response = await fetch(API_URL, {
+            const response = await fetch(`${API_URL}/nutricionistas/${data.id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -235,7 +241,7 @@ async function excluirConta() {
   try {
     const id = currentNutricionistaData.id;
 
-    const resposta = await fetch(`https://auxilionutricional-backend.onrender.com/nutricionistas/${id}`, {
+    const resposta = await fetch(`${API_URL}/nutricionistas/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
