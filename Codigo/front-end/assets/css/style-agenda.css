@@ -45,13 +45,10 @@ body {
 
 .calendar-header {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between; 
+    justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .calendar-header .header-left {
@@ -70,28 +67,27 @@ body {
 }
 
 .calendar-header h1#currentWeekRange {
+    flex-grow: 1;
+    text-align: center;
     font-size: 2em;
-    color: #051D40;
-    margin: 0 20px; 
-    white-space: nowrap; 
-    text-align: center; 
-    flex-grow: 1; 
+    margin: 0 10px;
+    color: #051D40; 
 }
 
 .week-nav-btn {
-    background-color: #5E17EB; 
+   background-color: #5E17EB;
     color: white;
     border: none;
-    padding: 4px 6px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 14px;
-    width: 36px;
-    height: 36px;
+    font-size: 16px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1;
+    flex-shrink: 0;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 

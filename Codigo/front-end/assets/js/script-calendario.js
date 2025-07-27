@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const endOfWeek = new Date(startOfWeek);
         endOfWeek.setDate(startOfWeek.getDate() + 6);
 
-        currentWeekRangeElement.textContent = `Semana de ${formatDate(startOfWeek)} a ${formatDate(endOfWeek)}`;
+        currentWeekRangeElement.textContent = `${formatDate(startOfWeek)} - ${formatDate(endOfWeek)}`;
 
         for (let i = 0; i < 7; i++) {
             const day = new Date(startOfWeek);
