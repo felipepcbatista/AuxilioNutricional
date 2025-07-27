@@ -167,7 +167,7 @@ h2{
     margin-bottom: 15px;
     color: var(--detalhes2);
 }
-/* Adicione ao seu arquivo styles.css */
+
 .food-list {
     list-style-type: none;
     padding: 0;
@@ -175,18 +175,21 @@ h2{
 }
 
 .food-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 15px;
-    border-radius: 5rem;
-    background-color: aliceblue;
-    margin-bottom: 1.3rem;
-    height: 2rem;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background-color: #f5faff;
+  border: 1px solid #dbe9f2;
+  transition: background-color 0.25s, transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 }
 
-
+.food-item:hover {
+  background-color: #eaf6ff;
+  transform: scale(1.01);
+}
 
 .food-btn {
     display: flex;
@@ -211,14 +214,29 @@ h2{
 }
 
 .food-name {
-    font-size: 1.1rem;
-    font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #051D40;
+  padding-left: 0.5rem;
 }
 
 .add-icon {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--detalhes1);
+  background-color: #edf6ec;
+  color: #2a9d8f;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.add-icon:hover {
+  background-color: #d4f4e2;
 }
 
 /* Efeito ao clicar */
@@ -231,16 +249,15 @@ h2{
 .food-name {
     flex-grow: 1;
 }
-.suggestions ul{
-    background-color: #deeede;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.175);
+.suggestions {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #e6f1e8;
+  border-radius: 12px;
 }
 .food-name{
     padding: 0 1rem
 }
-
-
-
 .add-btn {
     background: var(--detalhes2);
     color: white;
@@ -262,23 +279,4 @@ h2{
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
-}
-
-.food-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
-.food-item:first-child{
-    margin-top: 0.5rem;
-}
-
-.food-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0.5rem;
-}
-
-.food-item input[type="checkbox"] {
-    margin-right: 10px;
 }
