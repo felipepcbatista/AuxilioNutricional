@@ -4,7 +4,7 @@
 
 Este repositório é um fork do projeto original desenvolvido pela organização [ICEI-PUC-Minas-PMGES-TI](https://github.com/ICEI-PUC-Minas-PMGES-TI).
 
-Participei deste projeto como colaborador durante o desenvolvimento do Trabalho Interdisciplinas de Aplicações Web, contribuindo com funcionalidades, documentação e organização do código.
+Participei deste projeto como colaborador durante o desenvolvimento do Trabalho Interdisciplinar de Aplicações Web, contribuindo com funcionalidades, documentação e organização do código.
 
 Repositório original: [pmg-es-2025-1-ti1-2401200-auxilio-nutricional](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2401200-auxilio-nutricional)
 
